@@ -9,30 +9,41 @@ html, body { /*caracteríticas generales del body del html*/
 
 
 .barra{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
     width: 100%;
+    height: 115px;
     background-color: #D12332;
     border: 3px solid;
     border-color: #2C46B2;
-    position: absolute;
-    height: 115px;
+    padding: 10px;
+
+}
+.logos{
+  display: flex;
 }
 
 #pokemonLogo{
-    width: 20%;
-    margin-bottom: 20px;
-    margin-left: 20px;
+
+    width: 80%;
+    margin-left: 10px;
+
 }
 
 #goLogo{
-    width: 10%;
+    width: 70%;
     margin-left: -30px;
-    margin-bottom: 10px;
+    padding-top: 10px;
+    justify-content: flex-end;
+
 }
 
 #ash{
-    width: 10%;
-    height: 100%;
-    margin-left: 260px;
+    width: 8%;
+    height: 110%;
+    margin-left: 400px;
+    padding-bottom: 10px;
 }
 
 .footer{
@@ -49,40 +60,53 @@ html, body { /*caracteríticas generales del body del html*/
 }
 
 .searchBox{
+    display: flex;
+    margin-top: 20px;
+    margin-right: 200px;
+    flex-direction: column;
 }
 
+.searchSubmit{
+   display: flex;
+   margin-bottom: 12px;
+}
 #search{
+    width: 100%;
     background-color: #F3F4F6;
     border: 3px solid;
     border-color: #2C46B2;
     top: 20px;
-    margin-left: 10px;
     font-size: 16px;
     font-family: "Press Start 2p";
+    align-self: flex-start;
 }
 
 
 #lupa{
     margin-left: -30px;
-    padding: 2px;
+    height: auto;
     background-color:#F3F4F6;
-    border: 5px;
+    border: 3px solid;
+    border-color: #2C46B2;
+    justify-content: flex-end;
+
 }
 
 #filtrate{
-    margin-top: 20px;
-    margin-right: 175px;
+    width: 50%;
+    margin-bottom: 10px;
     padding: 5px;
     background-color:#F3F4F6;
     border: 3px solid;
     border-color: #2C46B2;
-    font-size: 40px;
+    font-size: 0px;
     color: #5B4848;
     font-size: 10px;
-    font-weight: 400;
+    font-weight: 400px;
     font-family: "Press Start 2p";
     text-align: center;
-    float: right;
+    align-self: center;
+
 }
 
 .copyright{
@@ -100,7 +124,44 @@ html, body { /*caracteríticas generales del body del html*/
     font-size: 20px;
 }
 
-.media{ 
+.media{
+    display:flex;
     margin-right: 100px;
     color:white;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+.fb{
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  margin-right: 10px;
+}
+.fb img{
+  width: 30%;
+  height: 30%;
+
+}
+
+.yt{
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  margin-right: 10px;
+}
+.yt img{
+  width: 30%;
+  height: 30%;
+}
+
+.tw{
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  margin-right: 10px;
+}
+.tw img{
+  width: 30%;
+  height: 30%;
 }

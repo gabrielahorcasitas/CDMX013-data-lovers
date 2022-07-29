@@ -6,21 +6,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  
+
   <body>
     <!-- Barra navegadora de la página-->
   <header class="barra">
-
+     <div class= "logos">
       <img src="images/pokemon.png" id = "pokemonLogo"/>
       <img src="images/go.png" id = "goLogo"/>
+    </div>
       <img src="images/ash.png" id = "ash"/>
 
-      <div class = "searchBox"></div>
+      <div class = "searchBox">
+        <div class="searchSubmit">
         <input type = "text" id="search" placeholder="Buscar" />
         <input type = "submit" id= "lupa" value = "&#128269;"/>
+        </div>
         <button type = "button" id= "filtrate">&#x25BC;Filtrar</button>
       </div>
-      
+
   </header>
 
     <div id="root"></div>
@@ -35,7 +38,7 @@
           <img src="images/facebook.png"/>
           <label>Facebook</label>
         </div>
-      
+
         <div class = "yt">
           <img src="images/youtube.png"/>
           <label>YouTube</label>
