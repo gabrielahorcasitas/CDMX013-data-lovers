@@ -2,14 +2,53 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Pokemon Go</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
+  
   <body>
+    <!-- Barra navegadora de la página-->
+  <header class="barra">
+
+      <img src="images/pokemon.png" id = "pokemonLogo"/>
+      <img src="images/go.png" id = "goLogo"/>
+      <img src="images/ash.png" id = "ash"/>
+
+      <div class = "searchBox"></div>
+        <input type = "text" id="search" placeholder="Buscar" />
+        <input type = "submit" id= "lupa" value = "&#128269;"/>
+        <button type = "button" id= "filtrate">&#x25BC;Filtrar</button>
+      </div>
+      
+  </header>
+
     <div id="root"></div>
-
-    <h1>PRUEBA PUSH</h1>
-
     <script src="main.js" type="module"></script>
-  </body>
+
+  <footer class = "footer">
+    <label class = "copyright">Pokemon Go &#169;</label>
+    <label id = "followText">Siguenos</label>
+
+      <div class = "media"> <!--Buscar cómo convertirlos a hipervinculos-->
+        <div class = "fb">
+          <img src="images/facebook.png"/>
+          <label>Facebook</label>
+        </div>
+      
+        <div class = "yt">
+          <img src="images/youtube.png"/>
+          <label>YouTube</label>
+        </div>
+
+        <div class = "tw">
+          <img src="images/twitter.png"/>
+          <label>Twitter</label>
+        </div>
+      </div>
+
+  </footer>
+
+</body>
+
 </html>
