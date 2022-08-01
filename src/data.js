@@ -9,8 +9,8 @@ export const anotherExample = () => {
   return 'OMG';
 };
 
-export const retrievePkms = () => {
-  let pokemonList = data["pokemon"];
+export const generatorHTML = (pokemonList) => {
+let pokecontainer = document.createElement('div');
   for(let i=0; i<pokemonList.length; i++){
     let pokemonObject = pokemonList[i];
 
@@ -19,11 +19,10 @@ export const retrievePkms = () => {
 
     pokemonImageDiv.innerHTML = "<img src=" + pokemonObject["img"] + " width=\"100px\" height=\"100px\">";
     pokemonNameDiv.innerHTML = pokemonObject["name"];
+    pokecontainer.append(pokemonImageDiv, pokemonNameDiv)
 
-    document.getElementById('pokemonDiv').appendChild(pokemonImageDiv);
-    document.getElementById('pokemonDiv').appendChild(pokemonNameDiv);
   }
-
+return pokecontainer
 }
 
 //export default data;
