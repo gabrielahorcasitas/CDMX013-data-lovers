@@ -165,3 +165,8 @@ html, body { /*caracteríticas generales del body del html*/
   width: 30%;
   height: 30%;
 }
+
+#grid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
