@@ -130,15 +130,17 @@ html, body { /*caracteríticas generales del body del html*/
 
 }
 
-/*.mainContent{
-    display: grid;
+.mainContent{
+
+    height: fit-content;
+    /*display: grid;
     grid-template-columns: 50px 100px;
     grid-template-rows: 50px 50px;
     border-color: #2C46B2;
     grid-gap: 1px;
-    height: 100vh;
+    height: 100vh;*/
 
-}*/
+}
 
 
 .copyright{
