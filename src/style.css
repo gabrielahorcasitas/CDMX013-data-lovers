@@ -197,3 +197,8 @@ html, body { /*caracteríticas generales del body del html*/
   width: 40%;
   height: 40%;
 }
+
+#grid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
