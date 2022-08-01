@@ -6,9 +6,6 @@ import { generatorHTML, anotherExample } from './data.js';
 console.log(anotherExample());
 let pokemonList = data["pokemon"];
 
-document.getElementById('pokemonDiv').appendChild(generatorHTML(pokemonList));
+//función generator le doy como parametros el div pokemonDiv y la pokemonList
+generatorHTML(document.getElementById('pokemonDiv'), pokemonList);
 
-
-
-
-//console.log(data);
