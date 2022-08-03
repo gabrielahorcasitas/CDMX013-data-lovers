@@ -10,17 +10,25 @@ export const generatorHTML = (pokecontainer, pokemonList) => {
     pokeIndividual.classList.add("pokemonIndividual");
 
     let pokemonImageDiv = document.createElement('div');
+        pokemonImageDiv.classList.add("imagePokemon");
     let pokemonNameDiv = document.createElement('div');
-    pokemonNameDiv.classList.add("namePokemon")
+        pokemonNameDiv.classList.add("namePokemon");
+    let pokemonNumDiv = document.createElement('div');
+        pokemonNumDiv.classList.add("numPokemon");
+    let pokemonTypeDiv = document.createElement('div');
+        pokemonTypeDiv.classList.add("typePokemon");
 
-    pokemonImageDiv.innerHTML = "<img src=" + pokemonObject["img"] + " width=\"150px\" height=\"150px\">";
+    pokemonImageDiv.innerHTML = "<img src=" + pokemonObject["img"] + " width=\"120px\" height=\"120px\">";
     pokemonNameDiv.innerHTML = pokemonObject["name"];
-    pokeIndividual.append(pokemonImageDiv, pokemonNameDiv)
+    pokemonNumDiv.innerHTML = pokemonObject["num"];
+    pokemonTypeDiv.innerHTML = pokemonObject["type"];
+
+    pokeIndividual.append( pokemonNumDiv, pokemonImageDiv, pokemonNameDiv, pokemonTypeDiv);
     pokecontainer.append(pokeIndividual);
 
   }
  console.log (typeof generatorHTML);
-return pokecontainer//---no hace falta porque es redundante, pokecontainer es el pokemon div que en un inicio de puse como parámetro
+//return pokecontainer//---no hace falta porque es redundante, pokecontainer es el pokemon div que en un inicio de puse como parámetro
 
 }
 

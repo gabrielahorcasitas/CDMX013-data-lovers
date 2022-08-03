@@ -14,7 +14,7 @@ describe('data', () => {
 
 describe('generatorHTML', () => {
   it('debería ser una función', () => {
-    expect(typeof generatorHTML ).toBe('function');
+    expect(typeof generatorHTML()).toBe('function');
   });
 
  // it('returns `anotherExample`', () => {
