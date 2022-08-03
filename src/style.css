@@ -2,17 +2,15 @@ html, body { /*caracteríticas generales del body del html*/
     width:100%;
     background-color: #F9D48B;
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
     justify-content: space-between;
-
 
  }
 
 * {/*para todos los elementos*/
     box-sizing: border-box;/*elementos contenidos dentro de box madre, incluyendo padding/margin*/
     Font-family: Consolas, monaco, monospace;
-
+  
   }
 
 
@@ -100,10 +98,8 @@ html, body { /*caracteríticas generales del body del html*/
     background-color:#F3F4F6;
     border: 3px solid;
     border-color: #2C46B2;
-    font-size: 0px;
     color: #5B4848;
-    font-size: 15px;
-    font-weight: 400px;
+    font-size: 12px;
     text-align: center;
     align-self:flex-start;
 }
@@ -115,10 +111,8 @@ html, body { /*caracteríticas generales del body del html*/
     background-color:#F3F4F6;
     border: 3px solid;
     border-color: #2C46B2;
-    font-size: 0px;
     color: #5B4848;
-    font-size: 15px;
-    font-weight: 400px;
+    font-size: 12px;
     text-align: center;
     align-self:flex-end;
 
@@ -127,8 +121,6 @@ html, body { /*caracteríticas generales del body del html*/
 .mainContent{
   display: flex;
   overflow: hidden;
-  min-height: 100%
-  width: 80%;
 }
 
 #pokemonDiv{
@@ -170,7 +162,7 @@ html, body { /*caracteríticas generales del body del html*/
   top: 950px;
   margin-top: 80px;
   display: flex;/*tipo de block flex para poder delimitar separación*/
-  justify-content: space-between;
+  justify-content: space-around;
 
 }
 
@@ -181,14 +173,16 @@ html, body { /*caracteríticas generales del body del html*/
     color: white;
 }
 
-#followText{ /*buscar cómo se despliega inline*/
-    margin-left: 580px;
-    margin-top: 20px;
+.followText{ /*buscar cómo se despliega inline*/
+    margin-left: 180px;
+    margin-right: 20px;
     color:white;
     font-size: 20px;
+    padding-top: 20px;
 }
 
 .media{
+
     display:flex;
     margin-right: 50px;
     color:white;

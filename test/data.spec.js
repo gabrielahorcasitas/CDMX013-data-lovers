@@ -1,23 +1,23 @@
-import { example, anotherExample } from '../src/data.js';
+import data from '../src/data/pokemon/pokemon.js';
+import generatorHTML from '../src/data.js';
 
-
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('data', () => {
+  it('debería ser un objeto', () => {
+    expect(typeof data).toBe('object');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
+ // it('returns `example`', () => {
+ //   expect(example()).toBe('example');
+ // });
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+describe('generatorHTML', () => {
+  it('debería ser una función', () => {
+    expect(typeof generatorHTML ).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
+ // it('returns `anotherExample`', () => {
+ //   expect(anotherExample()).toBe('OMG');
+ // });
 });
