@@ -124,8 +124,37 @@ html, body { /*caracteríticas generales del body del html*/
     font-weight: bold;
     text-align: center;
     align-self:flex-end;
+    cursor: pointer;
 
+}
 
+.dropdownContent {
+    width: 40%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownContent a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display:block;
 }
 
 .mainContent{
@@ -208,6 +237,7 @@ margin-top: -10px;
     color:white;
     font-size: 20px;
     padding-top: 20px;
+    width: 20%;
 }
 
 .media{
@@ -225,6 +255,7 @@ margin-top: -10px;
   flex-direction: row;
   padding-top: 20px;
   margin-right: 10px;
+
 }
 .fb img{
   width: 40%;
