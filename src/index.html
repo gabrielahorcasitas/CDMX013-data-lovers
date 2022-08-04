@@ -18,14 +18,21 @@
 
       <div class = "searchBox">
         <div class="searchSubmit">
-        <input type = "text" id="search" placeholder="Buscar" />
+        <input type = "text" id="search" placeholder="Search" />
         <input type = "submit" id= "lupa" value = "&#128269;"/>
         </div>
         <div class = "buttons">
-        <button type = "button" id= "order">Ordenar</button>
-        <button type = "button" id= "filtrate">&#x25BC;Filtrar</button>
+        <button type = "button" id= "order">Order</button>
+
+        <div class = "dropdownContent">
+          <button  id="filtrate" class="Filter">&#x25BC;Filter</button>
+         <div id="dropdownFilter" class="dropdown-content">
+          <a >Region</a>
+          <a >Type</a>
+         </div>
         </div>
       </div>
+
 
   </header>
 
@@ -39,11 +46,11 @@
 
   <footer class = "footer">
     <label class = "copyright">Pokémon Go &#169;</label>
-   
+
 
       <div class = "media"> <!--Buscar cómo convertirlos a hipervinculos-->
         <div class = "followText">
-          <label>Síguenos</label>
+          <label>Follow Us</label>
         </div>
         <div class = "fb">
           <img src="images/facebook.png"/>
