@@ -1,5 +1,5 @@
 import data from '../src/data/pokemon/pokemon.js';
-import generatorHTML from '../src/data.js';
+//import {generatorHTML} from '../src/main.js'; //para exportar cosas individuales de un archivo ponerlo entre llaves*
 
 describe('data', () => {
   it('debería ser un objeto', () => {
@@ -12,12 +12,12 @@ describe('data', () => {
 });
 
 
-describe('generatorHTML', () => {
-  it('debería ser una función', () => {
-    expect(typeof generatorHTML()).toBe('function');
-  });
+//describe('generatorHTML', () => {
+  //it('debería ser una función', () => {
+    //expect(typeof generatorHTML).toBe('function');
+  //});
 
  // it('returns `anotherExample`', () => {
  //   expect(anotherExample()).toBe('OMG');
  // });
-});
+//});
