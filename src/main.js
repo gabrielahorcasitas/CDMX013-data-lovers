@@ -1,6 +1,6 @@
 
 import data from './data/pokemon/pokemon.js';
-
+import {filtro} from './data.js'
 let pokemonList = data["pokemon"];
 
 //pokecontainer es pokemondiv y pokemonlist es la lista de objetos en objeto pokemon
@@ -37,21 +37,6 @@ export const generatorHTML = (pokecontainer, pokemonList) => {
 //función generator le doy como parametros el div pokemonDiv y la pokemonList
 generatorHTML(document.getElementById('pokemonDiv'), pokemonList);
 
-document.getElementById("filtrate").addEventListener('click', dropdownF);
-
-function dropdownF() {
-document.getElementById("dropdownFilter").classList.toggle("show");
-}
-
-window.onclick = function(event) {
-  if (!event.target.matches('.Filter')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
+document.getElementById("selectsFilters").addEventListener('change',(e)=>{
+  filtro(e.target.value);
+})
