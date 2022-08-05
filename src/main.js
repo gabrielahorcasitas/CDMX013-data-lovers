@@ -37,17 +37,15 @@ export const generatorHTML = (pokecontainer, pokemonList) => {
 //función generator le doy como parametros el div pokemonDiv y la pokemonList
 generatorHTML(document.getElementById('pokemonDiv'), pokemonList);
 
-
+document.getElementById("filtrate").addEventListener('click', dropdownF);
 
 function dropdownF() {
 document.getElementById("dropdownFilter").classList.toggle("show");
 }
- document.getElementById("dropdownFilter").addEventListener('click', dropdownF);
 
 window.onclick = function(event) {
   if (!event.target.matches('.Filter')) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
-     console.log(dropdowns);
     var i;
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];

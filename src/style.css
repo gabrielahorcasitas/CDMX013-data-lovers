@@ -112,8 +112,7 @@ html, body { /*caracteríticas generales del body del html*/
 }
 
 #filtrate{
-    width: 40%;
-    margin-bottom: 10px;
+    width: 100%;
     padding: 3px;
     background-color:#F9D48B;
     border: 3px solid;
@@ -130,23 +129,30 @@ html, body { /*caracteríticas generales del body del html*/
 
 .dropdownContent {
     width: 40%;
+    position: relative;
+    display: inline-block;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
+  width: 100%;
+  /*background-color: #f1f1f1;*/
+
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  background: #F3F4F6;
+  border: 2px solid #2C46B2;
+  border-radius: 0px 0px 0px 15px;
 }
 
 .dropdown-content a {
-  color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  text-align: center;
+  color:#5B4848;
 }
 
 .dropdownContent a:hover {
