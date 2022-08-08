@@ -1,7 +1,18 @@
-//import data from './data/pokemon/pokemon.js'; no hace falta porque ya se importo desde main y se vuelve la pokemonList
-import {generatorHTML,pokemonList} from './main.js';
 // Filtrado de tipo
-  export const filterByType =(condition) => {
+    export const filterByType =(condition,pokemonList)=>{
+      let filterType = pokemonList.filter(pokemon => pokemon.type[0] == condition.toLowerCase() || pokemon.type[1] == condition.toLowerCase());
+      return filterType;
+    }
+
+//Filtrado por Region
+    export const filterByRegion =(condition,pokemonList)=>{
+      let filterRegion = pokemonList.filter(pokemon => pokemon.generation.name == condition.toLowerCase());
+      return filterRegion;
+    }
+
+ //Estas son segundas opciones
+
+   /*export const filterByType =(condition,pokemonList) => {
           let filtered = [];
           for (let i = 0; i < pokemonList.length; i++){
             let arrayTypes = pokemonList[i].type;
@@ -12,13 +23,8 @@ import {generatorHTML,pokemonList} from './main.js';
               }
             }
             return filtered;
-          }
-//Filtrado por Region
-//export default data;
-export const filterByRegion =(condition)=>{
-  let filterRegion = pokemonList.filter(pokemon => pokemon.generation.name == condition.toLowerCase());
-  return filterRegion;
-}
+          }*/
+
   /* let regionFilter= pokemonList;
   let filterRegion = [];
   for (let i = 0; i < regionFilter.length; i++) {
@@ -27,13 +33,15 @@ export const filterByRegion =(condition)=>{
     }
   }
   console.log( filterRegion);*/
-  //Estas son segundas opciones
-/*  export const filteredOut = (filterValue, pokemonList, pokeProperty) =>{
+
+/*export const filterByRegion = (filterValue, pokemonList, condition) =>{
   let filteredPokemon = [];
-  if(pokeProperty == "region"){
+  if(condition == "region"){
     filteredPokemon = pokemonList.filter((current) => {
       return current.generation.name == filterValue.toLowerCase();
     });
   }
   return filteredPokemon;
 }*/
+
+//export default data;

@@ -2,7 +2,7 @@
 import data from './data/pokemon/pokemon.js';
 import {filterByRegion,filterByType} from './data.js'
 
-export let pokemonList = data["pokemon"];
+export let pokemonData= data.pokemon;
 
 
 //pokecontainer es pokemondiv y pokemonlist es la lista de objetos en objeto pokemon
@@ -37,18 +37,27 @@ export const generatorHTML = (pokecontainer, pokemonList) => {
   }
 
 //función generator le doy como parametros el div pokemonDiv y la pokemonList
-generatorHTML(document.getElementById('pokemonDiv'), pokemonList);
+generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
 
 //document.getElementById("filtrate").addEventListener('click', dropdownF);
 
 document.getElementById('region').addEventListener('change',(e)=>{
-  if (e.target.value == "Ver todos") {
-    generatorHTML(document.getElementById('pokemonDiv'), pokemonList);
+  if (e.target.value == "Todos") {
+    generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
   }else{
     generatorHTML(document.getElementById('pokemonDiv'), filterByRegion(e.target.value));
   }
 
 })
+
+document.getElementById('type').addEventListener('change',(e)=>{
+  if (e.target.value == "Todos") {
+    generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
+  }else{
+    generatorHTML(document.getElementById('pokemonDiv'), filterByType(e.target.value, pokemonData));
+  }
+})
+
 
 //Esta es una 2da. opcion
 /*document.getElementById("region").addEventListener('change',(e)=>{
@@ -56,17 +65,3 @@ document.getElementById('region').addEventListener('change',(e)=>{
   console.log(filteredRegion);
 
 })*/
-
-
-document.getElementById('type').addEventListener('change',(e)=>{
-  if (e.target.value == "Ver todos") {
-    generatorHTML(document.getElementById('pokemonDiv'), pokemonList);
-  }else{
-    generatorHTML(document.getElementById('pokemonDiv'), filterByType(e.target.value));
-  }
-})
-
-
-//function dropdownF() {
-//document.getElementById("dropdownFilter").classList.toggle("show");
-//}
