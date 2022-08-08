@@ -110,13 +110,24 @@ html, body { /*caracteríticas generales del body del html*/
   flex-direction: row;
   justify-content: space-around;
 
-
 }
+
 #region{
   background-color:#F9D48B;
   border: 3px solid;
   border-color: #2C46B2;
   border-radius: 15px;
+  color: #D12332;
+  font-size: 12px;
+  font-weight: bold;
+  width: 40%;
+}
+
+#region option {
+  background-color:#F9D48B;
+  border: 3px solid;
+  border-color: #2C46B2;
+  border-radius: 0px 0px 15px 15px;
   color: #D12332;
   font-size: 12px;
   font-weight: bold;
