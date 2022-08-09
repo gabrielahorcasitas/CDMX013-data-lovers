@@ -50,8 +50,8 @@ const generatorHTML = (pokecontainer, pokemonList) => {
             pokemonNumDiv.classList.add("numPokemon");
         let pokemonTypeDiv = document.createElement('div');
             pokemonTypeDiv.classList.add("typePokemon");
-        let pokemonGenerationDiv = document.createElement('div');
-            pokemonGenerationDiv.classList.add('generationPokemon');
+       /* let pokemonGenerationDiv = document.createElement('div');
+            pokemonGenerationDiv.classList.add('generationPokemon');*/
         let pokemonAboutDiv = document.createElement('div');
             pokemonAboutDiv.classList.add('aboutPokemon');
   
@@ -59,10 +59,10 @@ const generatorHTML = (pokecontainer, pokemonList) => {
         pokemonNameDiv.innerHTML = pokemonObject["name"];
         pokemonNumDiv.innerHTML = pokemonObject["num"];
         pokemonTypeDiv.innerHTML = pokemonObject["type"];
-        pokemonGenerationDiv.innerHTML = pokemonObject["generation"];
+        /*pokemonGenerationDiv.innerHTML = pokemonObject["generation"];*/
         pokemonAboutDiv.innerHTML = pokemonObject["about"];
   
-        pokeIndividual.append( pokemonNumDiv, pokemonImageDiv, pokemonNameDiv, pokemonTypeDiv, pokemonGenerationDiv, pokemonAboutDiv);
+        pokeIndividual.append( pokemonNumDiv, pokemonImageDiv, pokemonNameDiv, pokemonTypeDiv, /*pokemonGenerationDiv,*/ pokemonAboutDiv);
         pokecontainer.append(pokeIndividual);
   
       }
