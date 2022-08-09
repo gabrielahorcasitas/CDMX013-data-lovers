@@ -104,7 +104,11 @@ html, body { /*caracteríticas generales del body del html*/
     flex-direction: column;
 
 }
-
+.bottoms{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .selectsFilters{
   display: flex;
   flex-direction: row;
@@ -112,6 +116,27 @@ html, body { /*caracteríticas generales del body del html*/
 
 }
 
+.labelOrder{
+margin-top: 26px;
+}
+#order {
+  background-color:#F9D48B;
+  border: 3px solid;
+  border-color: #2C46B2;
+  border-radius: 15px;
+  color: #D12332;
+  font-size: 12px;
+  font-weight: bold;
+  width: 100%;
+}
+#order option {
+  background-color:#F9D48B;
+  color: #D12332;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
 #region{
   background-color:#F9D48B;
   border: 3px solid;
@@ -125,12 +150,10 @@ html, body { /*caracteríticas generales del body del html*/
 
 #region option {
   background-color:#F9D48B;
-  border: 3px solid;
-  border-color: #2C46B2;
-  border-radius: 0px 0px 15px 15px;
   color: #D12332;
   font-size: 12px;
   font-weight: bold;
+  text-align: center;
   width: 40%;
 }
 #type{
@@ -143,7 +166,14 @@ html, body { /*caracteríticas generales del body del html*/
   font-weight: bold;
   width: 40%;
 }
-
+#type option{
+  background-color:#F9D48B;
+  color: #D12332;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  width: 40%;
+}
 
 
 .mainContent{
