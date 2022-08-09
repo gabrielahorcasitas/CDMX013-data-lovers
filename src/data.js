@@ -10,7 +10,14 @@
       return filterRegion;
     }
 
- //Estas son segundas opciones
+//Filtrado por nombre en buscador
+    export const searchByName = (pokemonList, inputName) =>{
+      console.log(inputName);
+      let searchName = pokemonList.filter(pokemon => pokemon.name === inputName.toLowerCase());
+      return searchName;
+    }
+
+ //Estas son otras opciones
 
    /*export const filterByType =(condition,pokemonList) => {
           let filtered = [];

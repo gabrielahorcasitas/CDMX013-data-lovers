@@ -1,12 +1,11 @@
 
 import data from './data/pokemon/pokemon.js';
-import {filterByRegion,filterByType} from './data.js'
+import {filterByRegion,filterByType, searchByName} from './data.js'
 
-export let pokemonData= data.pokemon;
-
+let pokemonData= data.pokemon;
 
 //pokecontainer es pokemondiv y pokemonlist es la lista de objetos en objeto pokemon
-export const generatorHTML = (pokecontainer, pokemonList) => {
+const generatorHTML = (pokecontainer, pokemonList) => {
   pokecontainer.replaceChildren();
     for(let i=0; i<pokemonList.length; i++){
       let pokemonObject = pokemonList[i];
@@ -33,7 +32,6 @@ export const generatorHTML = (pokecontainer, pokemonList) => {
 
     }
   //return pokecontainer//---no hace falta porque es redundante, pokecontainer es el pokemon div que en un inicio de puse como parámetro
-
   }
 
 //función generator le doy como parametros el div pokemonDiv y la pokemonList
@@ -42,22 +40,21 @@ generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
 //document.getElementById("filtrate").addEventListener('click', dropdownF);
 
 document.getElementById('region').addEventListener('change',(e)=>{
-  if (e.target.value == "Todos") {
+  if (e.target.value == "Show All") {
     generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
   }else{
-    generatorHTML(document.getElementById('pokemonDiv'), filterByRegion(e.target.value));
+    generatorHTML(document.getElementById('pokemonDiv'), filterByRegion(e.target.value, pokemonData));
   }
 
-})
+});
 
 document.getElementById('type').addEventListener('change',(e)=>{
-  if (e.target.value == "Todos") {
+  if (e.target.value == "Show All") {
     generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
   }else{
     generatorHTML(document.getElementById('pokemonDiv'), filterByType(e.target.value, pokemonData));
   }
-})
-
+});
 
 //Esta es una 2da. opcion
 /*document.getElementById("region").addEventListener('change',(e)=>{
@@ -65,3 +62,12 @@ document.getElementById('type').addEventListener('change',(e)=>{
   console.log(filteredRegion);
 
 })*/
+
+//funcionalidad para buscador por nombre (search by name)
+let inputName = document.getElementById('search');//inicializa acceso a DOM
+const searchSubmit = document.getElementById('searchSubmit');
+
+searchSubmit.addEventListener('click', () =>{
+  //incluir variable "llena" con .value
+  generatorHTML(document.getElementById('pokemonDiv'), searchByName(pokemonData, inputName.value));
+});
