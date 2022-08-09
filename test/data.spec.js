@@ -1,6 +1,6 @@
 import data from '../src/data/pokemon/pokemon.js';
 import dataMock from './mockData.js'
-import {filterByRegion, filterByType} from '../src/data.js'; 
+import {filterByRegion, filterByType/*, searchByName*/} from '../src/data.js'; 
 
 
   it('debería ser un objeto', () => {
@@ -69,3 +69,22 @@ describe('filterByType', () => {
   })
 
 });
+
+
+ /* describe('searchByName', () => {
+
+test('debería ser una función', () => {
+    expect(typeof searchByName).toBe('function');
+  });
+
+  test('filtrar por input de name',()=>{
+    const runFilterName = searchByName('bulbasaur',dataMock.pokemon)
+    expect(runFilterName.length).toBe(1)
+  })
+
+  test('filtrar por type debería regresar 0',()=>{
+    const runFilterName = searchByName('fire',dataMock.pokemon)
+    expect(runFilterName.length).toBe(0)
+  })
+
+});*/
