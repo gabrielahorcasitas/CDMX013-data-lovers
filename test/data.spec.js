@@ -3,9 +3,9 @@ import dataMock from './mockData.js'
 import {filterByRegion, filterByType/*, searchByName*/} from '../src/data.js'; 
 
 
-  it('debería ser un objeto', () => {
+it('debería ser un objeto', () => {
     expect(typeof data).toBe('object');
-  });
+});
 
 describe('dataMock', () => {
   it('debería contener el nombre del pokemon', ()=>{

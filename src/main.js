@@ -1,6 +1,6 @@
 
 import data from './data/pokemon/pokemon.js';
-import {filterByRegion,filterByType, searchByName} from './data.js'
+import {filterByRegion,filterByType, searchByName,sortAZ} from './data.js'
 
 let pokemonData= data.pokemon;
 
@@ -77,7 +77,9 @@ generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
 
 //document.getElementById("filtrate").addEventListener('click', dropdownF);
 
+const selectRegion = document.getElementById('region');
 document.getElementById('region').addEventListener('change',(e)=>{
+  selectType.selectedIndex = "0";
   if (e.target.value == "Show All") {
     generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
   }else{
@@ -86,7 +88,9 @@ document.getElementById('region').addEventListener('change',(e)=>{
 
 });
 
+const selectType = document.getElementById('type');
 document.getElementById('type').addEventListener('change',(e)=>{
+  selectRegion.selectedIndex = "0";
   if (e.target.value == "Show All") {
     generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
   }else{
@@ -108,4 +112,13 @@ const searchSubmit = document.getElementById('searchSubmit');
 searchSubmit.addEventListener('click', () =>{
   //incluir variable "llena" con .value
   generatorHTMLCard(document.getElementById('pokemonDiv'), searchByName(pokemonData, inputName.value));
+});
+
+//funcionalidad a botón de ordenar
+document.getElementById('order').addEventListener('change',(e)=>{
+  if (e.target.value == "Show All") {
+    generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
+  }else{
+    generatorHTML(document.getElementById('pokemonDiv'), sortAZ(e.target.value, pokemonData));
+   }
 });

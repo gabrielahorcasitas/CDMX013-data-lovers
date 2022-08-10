@@ -16,6 +16,24 @@
       return searchName;
     }
 
+//Función de ordenado A-Z
+    export const sortAZ = (condition, pokemonList) => {
+        function sortName(a,b){
+          if (condition === "A-Z"){
+            if (a.name < b.name){
+              return -1;
+            }
+            if (a.name > b.name){
+              return 1;
+            }
+          return 0;
+          }
+        }
+      let sortResult = pokemonList.sort(sortName);
+      return sortResult;
+     }
+  
+
  //Estas son otras opciones
 
    /*export const filterByType =(condition,pokemonList) => {
@@ -50,4 +68,4 @@
   return filteredPokemon;
 }*/
 
-//export default data;
+//export default data
