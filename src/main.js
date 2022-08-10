@@ -1,6 +1,6 @@
 
 import data from './data/pokemon/pokemon.js';
-import {filterByRegion,filterByType, searchByName,sortAZ} from './data.js'
+import {filterByRegion,filterByType, searchByName,sortAZ,sortZA,sortNumpokedex} from './data.js'
 
 let pokemonData= data.pokemon;
 
@@ -38,10 +38,10 @@ const generatorHTML = (pokecontainer, pokemonList) => {
     pokecontainer.replaceChildren();
       for(let i=0; i<pokemonList.length; i++){
         let pokemonObject = pokemonList[i];
-  
+
         let pokeIndividual = document.createElement('div');
         pokeIndividual.classList.add("pokemonIndividual");
-  
+
         let pokemonImageDiv = document.createElement('div');
             pokemonImageDiv.classList.add("imagePokemon");
         let pokemonNameDiv = document.createElement('div');
@@ -54,7 +54,7 @@ const generatorHTML = (pokecontainer, pokemonList) => {
             pokemonGenerationDiv.classList.add('generationPokemon');
         let pokemonAboutDiv = document.createElement('div');
             pokemonAboutDiv.classList.add('aboutPokemon');
-  
+
         pokemonImageDiv.innerHTML = "<img src=" + pokemonObject["img"] + " width=\"120px\" height=\"120px\">";
         pokemonNameDiv.innerHTML = pokemonObject["name"];
         pokemonNumDiv.innerHTML = pokemonObject["num"];
@@ -62,10 +62,10 @@ const generatorHTML = (pokecontainer, pokemonList) => {
         pokemonGenerationDiv.innerHTML = pokemonObject["generation"]["num"].replace("ii", "2").replace(" i", " 1") + "<br/>"  +
                                           pokemonObject["generation"]["name"].replace("k", "K").replace("j", "J");
         pokemonAboutDiv.innerHTML = pokemonObject["about"];
-  
+
         pokeIndividual.append( pokemonNumDiv, pokemonImageDiv, pokemonNameDiv, pokemonTypeDiv, pokemonGenerationDiv, pokemonAboutDiv);
         pokecontainer.append(pokeIndividual);
-  
+
       }
     //return pokecontainer//---no hace falta porque es redundante, pokecontainer es el pokemon div que en un inicio de puse como parámetro
     }
@@ -120,5 +120,7 @@ document.getElementById('order').addEventListener('change',(e)=>{
     generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
   }else{
     generatorHTML(document.getElementById('pokemonDiv'), sortAZ(e.target.value, pokemonData));
+    generatorHTML(document.getElementById('pokemonDiv'), sortZA(e.target.value, pokemonData));
+    generatorHTML(document.getElementById('pokemonDiv'), sortNumpokedex(e.target.value, pokemonData));
    }
 });
