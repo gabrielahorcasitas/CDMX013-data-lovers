@@ -33,39 +33,57 @@
       return sortResult;
      }
 
-     //Función de ordenado Z-A
-         export const sortZA = (condition, pokemonList) => {
-             function sortName1(a,b){
-               if (condition === "Z-A"){
-                 if (a.name > b.name){
-                   return -1;
-                 }
-                 if (a.name < b.name){
-                   return 1;
-                 }
-               return 0;
-               }
+//Función de ordenado Z-A
+    export const sortZA = (condition, pokemonList) => {
+        function sortName(a,b){
+           if (condition === "Z-A"){
+             if (a.name > b.name){
+               return -1;
              }
-           let sortResult1 = pokemonList.sort(sortName1);
-           return sortResult1;
+             if (a.name < b.name){
+               return 1;
+             }
+          return 0;
           }
+        }
+      let sortResult = pokemonList.sort(sortName);
+      return sortResult;
+     }
 
-      //Función de ordenado descendente #pokedex
-              export const sortNumpokedex= (condition, pokemonList) => {
-                  function sortNPokedex(a,b){
-                    if (condition === "#Pokedex"){
-                      if (a.num > b.num){
-                        return -1;
-                      }
-                      if (a.num < b.num){
-                        return 1;
-                      }
-                    return 0;
-                    }
-                  }
-                let sortResult2 = pokemonList.sort(sortNPokedex);
-                return sortResult2;
-               }
+//Función de ordenado ascendente #pokedex
+
+    export const sortNum = (condition, pokemonList) => {
+      function sortNum(a,b){
+        if (condition === "#Pokedex"){
+          if (a.num < b.num){
+            return -1;
+          }
+          if (a.num > b.num){
+            return 1;
+          }
+        return 0;
+        }
+      }
+      let sortResult = pokemonList.sort(sortNum);
+      return sortResult;
+    }
+
+//Función de ordenado descendente #pokedex
+    export const sortNumInverse = (condition, pokemonList) => {
+        function sortNumPokedex(a,b){
+          if (condition === "#Pokedex Inverse"){
+            if (a.num > b.num){
+              return -1;
+            }
+            if (a.num < b.num){
+              return 1;
+            }
+          return 0;
+          }
+        }
+      let sortResult = pokemonList.sort(sortNumPokedex);
+      return sortResult;
+     }
 
  //Estas son otras opciones
 
