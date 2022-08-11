@@ -1,6 +1,6 @@
 
 import data from './data/pokemon/pokemon.js';
-import {filterByRegion,filterByType, searchByName,sortAZ,sortZA,sortNumpokedex} from './data.js'
+import {filterByRegion,filterByType, searchByName,sortAZ,sortZA,sortNum,sortNumInverse} from './data.js'
 
 let pokemonData= data.pokemon;
 
@@ -80,7 +80,7 @@ generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
 const selectRegion = document.getElementById('region');
 document.getElementById('region').addEventListener('change',(e)=>{
   selectType.selectedIndex = "0";
-  if (e.target.value == "Show All") {
+  if (e.target.value === "Show All") {
     generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
   }else{
     generatorHTML(document.getElementById('pokemonDiv'), filterByRegion(e.target.value, pokemonData));
@@ -91,7 +91,7 @@ document.getElementById('region').addEventListener('change',(e)=>{
 const selectType = document.getElementById('type');
 document.getElementById('type').addEventListener('change',(e)=>{
   selectRegion.selectedIndex = "0";
-  if (e.target.value == "Show All") {
+  if (e.target.value === "Show All") {
     generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
   }else{
     generatorHTML(document.getElementById('pokemonDiv'), filterByType(e.target.value, pokemonData));
@@ -116,11 +116,8 @@ searchSubmit.addEventListener('click', () =>{
 
 //funcionalidad a botón de ordenar
 document.getElementById('order').addEventListener('change',(e)=>{
-  if (e.target.value == "Show All") {
-    generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
-  }else{
+    generatorHTML(document.getElementById('pokemonDiv'), sortNum(e.target.value, pokemonData));
     generatorHTML(document.getElementById('pokemonDiv'), sortAZ(e.target.value, pokemonData));
     generatorHTML(document.getElementById('pokemonDiv'), sortZA(e.target.value, pokemonData));
-    generatorHTML(document.getElementById('pokemonDiv'), sortNumpokedex(e.target.value, pokemonData));
-   }
+    generatorHTML(document.getElementById('pokemonDiv'), sortNumInverse(e.target.value, pokemonData));
 });
