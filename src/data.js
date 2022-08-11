@@ -51,7 +51,6 @@
      }
 
 //Función de ordenado ascendente #pokedex
-
     export const sortNum = (condition, pokemonList) => {
       function sortNum(a,b){
         if (condition === "#Pokedex"){
