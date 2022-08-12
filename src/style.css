@@ -194,7 +194,6 @@ margin-top: 26px;
   position: relative;
   gap: 70px;
 
-
 }
 
 .pokemonIndividual {
@@ -207,6 +206,48 @@ margin-top: 26px;
   margin-left: 30px;
   margin-right: 30px;
   text-align: center;
+}
+
+.pokemonIndividualCard{
+  width: 50%;
+  background-color: #F3F4F6;
+  border: 3px solid;
+  border-radius: 16px;
+  border-color: #2C46B2;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: center;
+  display:flex;
+  flex-direction: row;
+
+}
+
+.pokemonBasics{
+  width: 30%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pokemonMiniAbout{
+  width: 100%;
+  padding: 10px;
+  background: #F5F5F5;
+  border: 1.5px solid #2C46B2;
+  border-radius: 15px;
+}
+
+.pokemonDetails{
+  width: 70%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.numPokemonCard{
+  font-size: 25px;
+  margin-left: 350px;
 }
 
 .imagePokemon{
@@ -238,11 +279,39 @@ margin-top: -10px;
   color: #D12332;
 }
 
+.weigthPokemon{
+  color: #5B4848;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.heigthPokemon{
+  color: #5B4848;
+  font-size: 17px;
+  font-weight: bold;
+}
+
 .aboutPokemon{
-  padding: 20px;
-  margin: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
   background-color: rgba(107, 138, 238, 0.555);
   border: 0px solid;
+  border-radius: 15px;
+}
+
+.statsPokemon{
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1.5px solid #2C46B2;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.attackTable{
+  height: 30px;
+  background: #F5F5F5;
+  border: 1.5px solid #D12332;
   border-radius: 15px;
 }
 

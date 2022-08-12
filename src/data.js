@@ -84,6 +84,38 @@
       return sortResult;
      }
 
+//Funciones para estadística
+// "special-attack": ["name", "base-damage", "energy", "move-duration-seg"];
+
+//Función para calcular STAB (agregar 20% al daño si son del mismo tipo)
+  export const calculatorSTAB = (pokemonList) => {
+
+    const specialAttack = pokemonList.pokemon.special_attack.name;
+    console.log(specialAttack);
+
+  /* const damage  = pokemonList['special-attack']['base-damage'];
+    const specialAttackName = pokemonList['special-attack']['name];
+    const energy = pokemonList['special-attack']['energy'];
+    const time = pokemonList['special-attack']['move-duration-seg'];
+    console.log(specialAttackName);*/
+
+    //if tienen el mismo tipo multiplicar damge por 20/100
+
+    
+    //else regresa el damage igual
+
+
+  }     
+
+//Función para calcular DPS: (daño*stab)/tiempo de mov.
+
+
+//Función para calcular EPS: energía/tiempo de mov.
+
+
+
+
+
  //Estas son otras opciones
 
    /*export const filterByType =(condition,pokemonList) => {
