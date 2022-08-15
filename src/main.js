@@ -1,6 +1,6 @@
 
 import data from './data/pokemon/pokemon.js';
-import {filterByRegion,filterByType, searchByName,sortAZ,sortZA,sortNum,sortNumInverse, calculatorSTAB} from './data.js'
+import {filterByRegion,filterByType, searchByName,sortAZ,sortZA,sortNum,sortNumInverse,calculatorSTAB,calculatorDPS,calculatorEPS} from './data.js'
 
 let pokemonData= data.pokemon;
 
@@ -51,7 +51,7 @@ const generatorHTML = (pokecontainer, pokemonList) => {
               pokemonNameDiv.classList.add("namePokemon");
           let pokemonTypeDiv = document.createElement('div');
               pokemonTypeDiv.classList.add("typePokemon");
-          
+
           let pokemonMiniAboutDiv = document.createElement('div');
               pokemonMiniAboutDiv.classList.add('pokemonMiniAbout');
 
@@ -71,28 +71,44 @@ const generatorHTML = (pokecontainer, pokemonList) => {
             pokemonAboutDiv.classList.add('aboutPokemon');
         let pokemonStatsDiv = document.createElement('div');
             pokemonStatsDiv.classList.add('statsPokemon');
-          let pokemonAttackTableDiv = document.createElement('div');
-            pokemonAttackTableDiv.classList.add('attackTable');
-            let pokemonAttackName = document.createElement('div');
-                pokemonAttackName.classList.add('pokemonAttack');
-          
+        let pokemonAttackName = document.createElement('table');
+            pokemonAttackName.classList.add('pokemonAttack');
+
         pokemonImageDiv.innerHTML = "<img src=" + pokemonObject["img"] + " width=\"120px\" height=\"120px\">";
         pokemonNameDiv.innerHTML = pokemonObject["name"];
         pokemonNumDiv.innerHTML = pokemonObject["num"];
         pokemonTypeDiv.innerHTML = pokemonObject["type"];
         pokemonGenerationDiv.innerHTML = pokemonObject["generation"]["num"].replace("ii", "2").replace(" i", " 1") + "<br/>"  +
                                           pokemonObject["generation"]["name"].replace("k", "K").replace("j", "J");
-        pokemonHeigthDiv.innerHTML = pokemonObject["size"]["height"];
-        pokemonWeigthDiv.innerHTML = pokemonObject["size"]["weight"];
+        pokemonHeigthDiv.innerHTML = "<img src=images/height.png >" +" "+ pokemonObject["size"]["height"];
+        pokemonWeigthDiv.innerHTML = "<img src=images/weight.png >" +" "+ pokemonObject["size"]["weight"];
         pokemonAboutDiv.innerHTML = pokemonObject["about"];
-        pokemonStatsDiv.innerHTML = "<span>Special Attacks</span>";
-        /*pokemonAttackName.innerHTML = pokemonObject['special_attack'][0]["name"];*/
+        pokemonStatsDiv.innerHTML = "<span class=attacksTitle>Special Attacks</span>";
+        pokemonAttackName.innerHTML = "<tr>"+"<th class=headerTable>Name</th>"+"<th class=headerTable>STAB</th>"+"<th class=headerTable>DPS</th>"+"<th class=headerTable>EPS</th>"+"</tr>";
+
+
+
+        let attackhtml= "";
+        let especialataques=pokemonObject["special-attack"];
+
+
+        for (let attack of especialataques){
+          attackhtml+=
+                       "<tr>"+"<th><span class=attackNameTable>"+attack.name+"</span></th>"+
+                      "<th><span class=attackStats>"+calculatorSTAB(attack ["base-damage"],attack ["type"], pokemonObject["type"])+"</span></th>"+
+                      "<th><span class=attackStats>"+calculatorDPS(attack ["base-damage"], attack ["type"],pokemonObject["type"], attack["move-duration-seg"])+"</span></th>"+
+                      "<th><span class=attackStats>"+calculatorEPS(attack ["energy"], attack["move-duration-seg"])+"</span></th>"+
+                      //"<th><span>"+attack ["type"]+"</span></th>"
+           "</tr>";
+        }
+        pokemonAttackName.innerHTML = pokemonAttackName.innerHTML + attackhtml;
+        console.log(attackhtml);
 
         pokeIndividual.append(pokemonBasics, pokemonDetails);
-        pokemonBasics.append(pokemonImageDiv, pokemonNameDiv, pokemonTypeDiv, pokemonMiniAboutDiv);
+        pokemonBasics.append(pokemonImageDiv,pokemonNumDiv, pokemonNameDiv, pokemonTypeDiv, pokemonMiniAboutDiv);
         pokemonMiniAboutDiv.append(pokemonGenerationDiv, pokemonWeigthDiv, pokemonHeigthDiv);
-        pokemonDetails.append(pokemonNumDiv,pokemonAboutDiv, pokemonStatsDiv);
-        pokemonStatsDiv.append(pokemonAttackTableDiv);
+        pokemonDetails.append(pokemonAboutDiv, pokemonStatsDiv);
+        pokemonStatsDiv.append(pokemonAttackName);
         pokecontainer.append(pokeIndividual);
 
       }
@@ -140,7 +156,7 @@ const searchSubmit = document.getElementById('searchSubmit');
 searchSubmit.addEventListener('click', () =>{
   //incluir variable "llena" con .value
   generatorHTMLCard(document.getElementById('pokemonDiv'), searchByName(pokemonData, inputName.value));
-  generatorHTML(document.getElementById('pokemonDiv'), calculatorSTAB(pokemonData));
+
 });
 
 //funcionalidad a botón de ordenar
@@ -150,5 +166,3 @@ document.getElementById('order').addEventListener('change',(e)=>{
     generatorHTML(document.getElementById('pokemonDiv'), sortZA(e.target.value, pokemonData));
     generatorHTML(document.getElementById('pokemonDiv'), sortNumInverse(e.target.value, pokemonData));
 });
-
-
