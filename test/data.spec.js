@@ -1,6 +1,6 @@
 import data from '../src/data/pokemon/pokemon.js';
 import dataMock from './mockData.js'
-import {filterByRegion, filterByType, searchByName, sortAZ, sortZA, sortNum, sortNumInverse} from '../src/data.js'; 
+import {filterByRegion, filterByType, searchByName, sortAZ, sortZA, sortNum, sortNumInverse, calculatorSTAB, calculatorDPS, calculatorEPS} from '../src/data.js'; 
 
 const orderNum = [
   {
@@ -195,6 +195,40 @@ const orderNameInvTwo = [
 ];
 
 
+const mockType = {
+  "num": "007",
+  "name": "squirtle",
+  "type": [
+    "water"
+  ],
+  "special-attack": [
+  {
+    "name": "aqua jet",
+    "type": "water",
+    "base-damage": "45",
+    "energy": "-33",
+    "move-duration-seg": "2.6"
+  },
+  {
+    "name": "aqua tail",
+    "type": "water",
+    "base-damage": "50",
+    "energy": "-33",
+    "move-duration-seg": "1.9"
+  },
+  {
+    "name": "water pulse",
+    "type": "water",
+    "base-damage": "70",
+    "energy": "-50",
+    "move-duration-seg": "3.2"
+  }
+]
+};
+
+/*const specialAttacks = mockType['special-attack'];
+let attack = "";*/
+
 
 it('debería ser un objeto', () => {
     expect(typeof data).toBe('object');
@@ -284,44 +318,55 @@ test('debería ser una función', () => {
 
 describe('Corroborar funciones de ordenado alfabeticamente (A-Z/Z-A)',() =>{
 
-it('sortAZ debería ser una función', ()=> {
-  expect(typeof sortAZ).toBe('function');
-});
-
-it('sortAZ debería ordenar de A-Z', () => {
-  expect(sortAZ('A-Z', orderNameInv)).toEqual(orderName);
-});
-
-it('sortZA debería ser una función', () => {
-  expect(typeof sortZA).toBe('function');
-});
-
-it('sortZA debería ordenar de Z-A', () => {
-  expect(sortZA('Z-A', orderNameTwo)).toEqual(orderNameInvTwo);
-});
-
-it('sortAZ debería ser una función', ()=> {
-  expect(typeof sortNum).toBe('function');
-});
-
-it('sortNum debería ordenar por orden numérico ascendente',() => {
-  expect(sortNum('#Pokedex', orderNumInv)).toEqual(orderNum);
-});
-
-it('sortAZ debería ser una función', ()=> {
-  expect(typeof sortNumInverse).toBe('function');
-});
-
-it('sortNumInverse debería ordenar por orden numérico descendente',() => {
-  expect(sortNumInverse('#Pokedex Inverse', orderNumTwo)).toEqual(orderNumInvTwo);
-});
-
-});
-
-/*describe('Corroborar funciones de ordenado por #pokedex', () => {
-
-  it('sortNum debería ordenar por orden numérico ascendente',() => {
-    expect(sortNum('#Pokedex', orderName)).toEqual(orderName);
+  it('sortAZ debería ser una función', ()=> {
+    expect(typeof sortAZ).toBe('function');
   });
 
-})*/
+  it('sortAZ debería ordenar de A-Z', () => {
+    expect(sortAZ('A-Z', orderNameInv)).toEqual(orderName);
+  });
+
+  it('sortZA debería ser una función', () => {
+    expect(typeof sortZA).toBe('function');
+  });
+
+  it('sortZA debería ordenar de Z-A', () => {
+    expect(sortZA('Z-A', orderNameTwo)).toEqual(orderNameInvTwo);
+  });
+
+  it('sortAZ debería ser una función', ()=> {
+    expect(typeof sortNum).toBe('function');
+  });
+
+  it('sortNum debería ordenar por orden numérico ascendente',() => {
+    expect(sortNum('#Pokedex', orderNumInv)).toEqual(orderNum);
+  });
+
+  it('sortAZ debería ser una función', ()=> {
+    expect(typeof sortNumInverse).toBe('function');
+  });
+
+  it('sortNumInverse debería ordenar por orden numérico descendente',() => {
+    expect(sortNumInverse('#Pokedex Inverse', orderNumTwo)).toEqual(orderNumInvTwo);
+  });
+
+});
+
+describe('Corroborar funciones cálculos estadísticos',() =>{
+  test('calculatorSTAB debería ser una función', () => {
+    expect(typeof calculatorSTAB).toBe('function');
+  });
+ /* test('debe retornar un stab de [54]',() =>{
+    expect(calculatorSTAB(mockTypedamage, mockTypeattackType, mockType.type)).toEqual([54]);
+  });*/
+
+
+  test('calculatorDPS debería ser una función', () => {
+    expect(typeof calculatorDPS).toBe('function');
+  });
+  test('calculatorEPS debería ser una función', () => {
+    expect(typeof calculatorEPS).toBe('function');
+  });
+
+
+});

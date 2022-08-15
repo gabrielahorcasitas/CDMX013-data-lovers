@@ -308,7 +308,6 @@ margin-top: -10px;
   border: 1.5px solid #2C46B2;
   border-radius: 15px;
   font-size: 18px;
-  font-weight: bold;
   margin-top: 20px;
 }
 
@@ -323,18 +322,23 @@ margin-top: -10px;
   border: 1.5px solid #D12332;
   border-radius: 15px;
   margin-top: 8px;
+  padding: 5px;
   padding-right: 30px;
 
 }
 
 .headerTable{
   color:#D12332;
+  font-weight: lighter; 
+}
 
+.attackNameTable{
+  font-weight: lighter;
 }
 
 .attackStats{
   color: #5B4848;
-
+  font-weight: lighter; 
 }
 
 

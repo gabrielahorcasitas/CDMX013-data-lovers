@@ -74,10 +74,18 @@ const generatorHTML = (pokecontainer, pokemonList) => {
         let pokemonAttackName = document.createElement('table');
             pokemonAttackName.classList.add('pokemonAttack');
 
+       /* const typePokemon = (typeEachPokemon) => {
+          let eachTypeImg = "";
+          typeEachPokemon.forEach((elementImg) => {
+            eachTypeImg += "<img src=images/types/types/.png alt=type pokemon/>";
+          });
+          return eachTypeImg;
+        };*/
+
         pokemonImageDiv.innerHTML = "<img src=" + pokemonObject["img"] + " width=\"120px\" height=\"120px\">";
         pokemonNameDiv.innerHTML = pokemonObject["name"];
         pokemonNumDiv.innerHTML = pokemonObject["num"];
-        pokemonTypeDiv.innerHTML = pokemonObject["type"];
+        pokemonTypeDiv.innerHTML = pokemonObject["type"]; // + typePokemon(pokemonObject["type"]);
         pokemonGenerationDiv.innerHTML = pokemonObject["generation"]["num"].replace("ii", "2").replace(" i", " 1") + "<br/>"  +
                                           pokemonObject["generation"]["name"].replace("k", "K").replace("j", "J");
         pokemonHeigthDiv.innerHTML = "<img src=images/height.png >" +" "+ pokemonObject["size"]["height"];
@@ -89,20 +97,18 @@ const generatorHTML = (pokecontainer, pokemonList) => {
 
 
         let attackhtml= "";
-        let especialataques=pokemonObject["special-attack"];
+        let specialAttacks=pokemonObject["special-attack"];
 
 
-        for (let attack of especialataques){
+        for (let attack of specialAttacks){
           attackhtml+=
-                       "<tr>"+"<th><span class=attackNameTable>"+attack.name+"</span></th>"+
-                      "<th><span class=attackStats>"+calculatorSTAB(attack ["base-damage"],attack ["type"], pokemonObject["type"])+"</span></th>"+
+                      "<tr>"+"<th><span class=attackNameTable>"+attack.name+"</span></th>"+
+                      "<th><span class=attackStats>"+calculatorSTAB(attack ["base-damage"], attack ["type"], pokemonObject["type"])+"</span></th>"+
                       "<th><span class=attackStats>"+calculatorDPS(attack ["base-damage"], attack ["type"],pokemonObject["type"], attack["move-duration-seg"])+"</span></th>"+
                       "<th><span class=attackStats>"+calculatorEPS(attack ["energy"], attack["move-duration-seg"])+"</span></th>"+
-                      //"<th><span>"+attack ["type"]+"</span></th>"
-           "</tr>";
+                      "</tr>";
         }
         pokemonAttackName.innerHTML = pokemonAttackName.innerHTML + attackhtml;
-        console.log(attackhtml);
 
         pokeIndividual.append(pokemonBasics, pokemonDetails);
         pokemonBasics.append(pokemonImageDiv,pokemonNumDiv, pokemonNameDiv, pokemonTypeDiv, pokemonMiniAboutDiv);
