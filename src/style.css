@@ -224,9 +224,11 @@ margin-top: 26px;
 
 .pokemonBasics{
   width: 30%;
-  padding: 20px;
   display: flex;
   flex-direction: column;
+  padding: 20px;
+  justify-content: space-around;
+
 }
 
 .pokemonMiniAbout{
@@ -239,15 +241,15 @@ margin-top: 26px;
 
 .pokemonDetails{
   width: 70%;
-  padding: 20px;
   display: flex;
   flex-direction: column;
-
+  padding: 20px;
+  justify-content: space-around;
 }
 
 .numPokemonCard{
   font-size: 25px;
-  margin-left: 350px;
+  margin-bottom: 1px;
 }
 
 .imagePokemon{
@@ -293,7 +295,8 @@ margin-top: -10px;
 
 .aboutPokemon{
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  margin-top:11px;
   background-color: rgba(107, 138, 238, 0.555);
   border: 0px solid;
   border-radius: 15px;
@@ -306,14 +309,34 @@ margin-top: -10px;
   border-radius: 15px;
   font-size: 18px;
   font-weight: bold;
+  margin-top: 20px;
 }
 
-.attackTable{
-  height: 30px;
+.attacksTitle{
+  font-size: 22px;
+
+}
+
+.pokemonAttack{
+  width:100%;
   background: #F5F5F5;
   border: 1.5px solid #D12332;
   border-radius: 15px;
+  margin-top: 8px;
+  padding-right: 30px;
+
 }
+
+.headerTable{
+  color:#D12332;
+
+}
+
+.attackStats{
+  color: #5B4848;
+
+}
+
 
 .footer{
   bottom: 0;

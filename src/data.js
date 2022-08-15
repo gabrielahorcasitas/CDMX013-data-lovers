@@ -88,10 +88,36 @@
 // "special-attack": ["name", "base-damage", "energy", "move-duration-seg"];
 
 //Función para calcular STAB (agregar 20% al daño si son del mismo tipo)
-  export const calculatorSTAB = (pokemonList) => {
+ export const calculatorSTAB = (attack,typeattack,typePokemon) => {
+        const damage = Number(attack);
+ console.log("attack,typeattack,typePokemon"+ attack + " " +typeattack+" "+typePokemon)
+   if (typePokemon.includes(typeattack)) {
+        const stab = Number((damage * 20) / 100 + damage);
+        console.log("stab"+stab)
+   return stab;
+  }
+ return damage;
+}
 
-    const specialAttack = pokemonList.pokemon.special_attack.name;
-    console.log(specialAttack);
+export const calculatorDPS = (attack, typeattack, typePokemon, time) => {
+       const damage = Number(attack);
+       const moveTime = Number(time);
+        let dps = Math.round(damage/moveTime);
+       if (typePokemon.includes(typeattack)) {
+            const stab = Number((damage * 20) / 100 + damage);
+         dps = Math.round(stab/moveTime);
+        }
+        return dps;
+}
+
+export const calculatorEPS = (energy, time) =>{
+       const energyExpend = Number(energy);
+       const moveTime = Number(time);
+    const eps = Math.round(energyExpend/moveTime) ;
+    return eps;
+}
+
+
 
   /* const damage  = pokemonList['special-attack']['base-damage'];
     const specialAttackName = pokemonList['special-attack']['name];
@@ -101,11 +127,11 @@
 
     //if tienen el mismo tipo multiplicar damge por 20/100
 
-    
+
     //else regresa el damage igual
 
 
-  }     
+
 
 //Función para calcular DPS: (daño*stab)/tiempo de mov.
 
