@@ -85,7 +85,7 @@ const generatorHTML = (pokecontainer, pokemonList) => {
         const typePokemon = (typeEachPokemon) => {
           let eachTypeImg = "";
           typeEachPokemon.forEach((elementImg) => {
-            eachTypeImg += "<img src=images/types/types/"+elementImg+".png alt=type pokemon/>";
+            eachTypeImg += "<img src=./src/images/types/types/"+elementImg+".png alt=type pokemon/>";
           });
           return eachTypeImg;
         };
