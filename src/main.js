@@ -21,7 +21,7 @@ const generatorHTML = (pokecontainer, pokemonList) => {
           pokemonNumDiv.classList.add("numPokemon");
       let pokemonTypeDiv = document.createElement('div');
           pokemonTypeDiv.classList.add("typePokemon");
-         
+
       const typePokemon = (typeEachPokemon) => {
         let eachTypeImg = "";
           typeEachPokemon.forEach((elementImg) => {
@@ -179,4 +179,9 @@ document.getElementById('order').addEventListener('change',(e)=>{
     generatorHTML(document.getElementById('pokemonDiv'), sortAZ(e.target.value, pokemonData));
     generatorHTML(document.getElementById('pokemonDiv'), sortZA(e.target.value, pokemonData));
     generatorHTML(document.getElementById('pokemonDiv'), sortNumInverse(e.target.value, pokemonData));
+});
+
+//Regresa a pagina principal al dar click en el logotipo
+document.getElementById('pokemonLogo').addEventListener('click', (e)=>{
+    generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
 });
