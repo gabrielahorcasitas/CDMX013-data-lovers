@@ -195,7 +195,7 @@ const orderNameInvTwo = [
 ];
 
 //const conditionOrder = "A-Z";
-const conditionOrderError = "C-D";
+//const conditionOrderError = "C-D";
 
 const mockTypeDamage = 45;
 const mockTypeAttackType = "water";

@@ -25,7 +25,7 @@ const generatorHTML = (pokecontainer, pokemonList) => {
       const typePokemon = (typeEachPokemon) => {
         let eachTypeImg = "";
           typeEachPokemon.forEach((elementImg) => {
-            eachTypeImg += "<img src=images/types/types/"+elementImg+".png alt=type pokemon/>";
+            eachTypeImg += "<img src=./src/images/types/types/"+elementImg+".png alt=type pokemon/>";
           });
           return eachTypeImg;
         };
@@ -182,6 +182,6 @@ document.getElementById('order').addEventListener('change',(e)=>{
 });
 
 //Regresa a pagina principal al dar click en el logotipo
-document.getElementById('pokemonLogo').addEventListener('click', (e)=>{
+document.getElementById('pokemonLogo').addEventListener('click', ()=>{
     generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
 });
