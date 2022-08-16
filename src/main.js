@@ -21,11 +21,19 @@ const generatorHTML = (pokecontainer, pokemonList) => {
           pokemonNumDiv.classList.add("numPokemon");
       let pokemonTypeDiv = document.createElement('div');
           pokemonTypeDiv.classList.add("typePokemon");
+         
+      const typePokemon = (typeEachPokemon) => {
+        let eachTypeImg = "";
+          typeEachPokemon.forEach((elementImg) => {
+            eachTypeImg += "<img src=images/types/types/"+elementImg+".png alt=type pokemon/>";
+          });
+          return eachTypeImg;
+        };
 
       pokemonImageDiv.innerHTML = "<img src=" + pokemonObject["img"] + " width=\"120px\" height=\"120px\">";
       pokemonNameDiv.innerHTML = pokemonObject["name"];
       pokemonNumDiv.innerHTML = pokemonObject["num"];
-      pokemonTypeDiv.innerHTML = pokemonObject["type"];
+      pokemonTypeDiv.innerHTML = typePokemon(pokemonObject["type"]);
 
       pokeIndividual.append( pokemonNumDiv, pokemonImageDiv, pokemonNameDiv, pokemonTypeDiv);
       pokecontainer.append(pokeIndividual);
@@ -74,18 +82,18 @@ const generatorHTML = (pokecontainer, pokemonList) => {
         let pokemonAttackName = document.createElement('table');
             pokemonAttackName.classList.add('pokemonAttack');
 
-       /* const typePokemon = (typeEachPokemon) => {
+        const typePokemon = (typeEachPokemon) => {
           let eachTypeImg = "";
           typeEachPokemon.forEach((elementImg) => {
-            eachTypeImg += "<img src=images/types/types/.png alt=type pokemon/>";
+            eachTypeImg += "<img src=images/types/types/"+elementImg+".png alt=type pokemon/>";
           });
           return eachTypeImg;
-        };*/
+        };
 
         pokemonImageDiv.innerHTML = "<img src=" + pokemonObject["img"] + " width=\"120px\" height=\"120px\">";
         pokemonNameDiv.innerHTML = pokemonObject["name"];
         pokemonNumDiv.innerHTML = pokemonObject["num"];
-        pokemonTypeDiv.innerHTML = pokemonObject["type"]; // + typePokemon(pokemonObject["type"]);
+        pokemonTypeDiv.innerHTML = pokemonObject["type"] + "<br/>" + typePokemon(pokemonObject["type"]);
         pokemonGenerationDiv.innerHTML = pokemonObject["generation"]["num"].replace("ii", "2").replace(" i", " 1") + "<br/>"  +
                                           pokemonObject["generation"]["name"].replace("k", "K").replace("j", "J");
         pokemonHeigthDiv.innerHTML = "<img src=images/height.png >" +" "+ pokemonObject["size"]["height"];
