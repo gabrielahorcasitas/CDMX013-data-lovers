@@ -38,7 +38,7 @@ html, body { /*caracteríticas generales del body del html*/
 
     width: 80%;
     margin-left: 30px;
-
+    cursor: pointer;
 }
 
 #goLogo{
@@ -335,7 +335,7 @@ margin-top: -10px;
 
 .headerTable{
   color:#D12332;
-  font-weight: lighter; 
+  font-weight: lighter;
 }
 
 .attackNameTable{
@@ -344,7 +344,7 @@ margin-top: -10px;
 
 .attackStats{
   color: #5B4848;
-  font-weight: lighter; 
+  font-weight: lighter;
 }
 
 
