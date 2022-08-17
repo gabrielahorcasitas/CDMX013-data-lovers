@@ -164,6 +164,7 @@ margin-top: 26px;
   text-align: center;
   width: 40%;
 }
+
 #type{
   background-color:#F9D48B;
   border: 3px solid;
@@ -175,6 +176,7 @@ margin-top: 26px;
   width: 40%;
   cursor: pointer;
 }
+
 #type option{
   background-color:#F9D48B;
   color: #D12332;
@@ -184,14 +186,12 @@ margin-top: 26px;
   width: 40%;
 }
 
-
 .mainContent{
   display: flex;
   overflow: hidden;
 }
 
 #pokemonDiv{
-
   margin-top: 50px;
   width: 100%;
   display: flex;
@@ -203,7 +203,6 @@ margin-top: 26px;
 }
 
 .pokemonIndividual {
-
   width: 30%;
   background-color: #F3F4F6;
   border: 3px solid;
@@ -212,6 +211,13 @@ margin-top: 26px;
   margin-left: 30px;
   margin-right: 30px;
   text-align: center;
+}
+
+.pokemonIndividual:hover{
+  border: 5px outset;
+  border-color:#1c28dab2;
+  box-shadow: 10px 12px 0.5rem rgba(124, 130, 223, 0.5);
+ 
 }
 
 .pokemonIndividualCard{

@@ -39,7 +39,7 @@ const generatorHTML = (pokecontainer, pokemonList) => {
       pokecontainer.append(pokeIndividual);
 
     }
-  //return pokecontainer//---no hace falta porque es redundante, pokecontainer es el pokemon div que en un inicio de puse como parámetro
+  //return pokecontainer//---no hace falta, es redundante, pokecontainer es el pokemon div que en un inicio pusimos como parámetro
   }
 
   const generatorHTMLCard = (pokecontainer, pokemonList) => {
@@ -102,8 +102,6 @@ const generatorHTML = (pokecontainer, pokemonList) => {
         pokemonStatsDiv.innerHTML = "<span class=attacksTitle>Special Attacks</span>";
         pokemonAttackName.innerHTML = "<tr>"+"<th class=headerTable>Name</th>"+"<th class=headerTable>STAB</th>"+"<th class=headerTable>DPS</th>"+"<th class=headerTable>EPS</th>"+"</tr>";
 
-
-
         let attackhtml= "";
         let specialAttacks=pokemonObject["special-attack"];
 
@@ -129,7 +127,21 @@ const generatorHTML = (pokecontainer, pokemonList) => {
     //return pokecontainer//---no hace falta porque es redundante, pokecontainer es el pokemon div que en un inicio de puse como parámetro
     }
 
+    /*const generatorHTMLErrorMessage = (pokecontainer) =>{
+      
+      pokecontainer.replaceChildren();
 
+      const pokeMessageError = document.createElement('div');
+            pokeMessageError.classList.add('messageErrorBox');
+      const messageErrorText = document.createElement('p');
+            messageErrorText.classList.add('messageErrorText')
+
+      messageErrorText.innerHTML = "We found no matches, try typing only the full name of a pokemon";
+
+      pokeMessageError.append(messageErrorText);
+      pokecontainer.append(pokeMessageError);
+
+    }*/
 
 //función generator le doy como parametros el div pokemonDiv y la pokemonList
 generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
@@ -169,8 +181,9 @@ let inputName = document.getElementById('search');//inicializa acceso a DOM
 const searchSubmit = document.getElementById('searchSubmit');
 searchSubmit.addEventListener('click', () =>{
   //incluir variable "llena" con .value
-  generatorHTMLCard(document.getElementById('pokemonDiv'), searchByName(pokemonData, inputName.value));
-
+   generatorHTMLCard(document.getElementById('pokemonDiv'), searchByName(pokemonData, inputName.value));
+  //vaciar input textbox después de dar click al botón
+   inputName.value = '';
 });
 
 //funcionalidad a botón de ordenar
@@ -182,6 +195,6 @@ document.getElementById('order').addEventListener('change',(e)=>{
 });
 
 //Regresa a pagina principal al dar click en el logotipo
-document.getElementById('pokemonLogo').addEventListener('click', (e)=>{
+document.getElementById('pokemonLogo').addEventListener('click', ()=>{
     generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
 });
