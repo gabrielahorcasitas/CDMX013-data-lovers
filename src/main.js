@@ -127,8 +127,8 @@ const generatorHTML = (pokecontainer, pokemonList) => {
     //return pokecontainer//---no hace falta porque es redundante, pokecontainer es el pokemon div que en un inicio de puse como parámetro
     }
 
-    /*const generatorHTMLErrorMessage = (pokecontainer) =>{
-      
+    const generatorHTMLErrorMessage = (pokecontainer,inputName) =>{
+
       pokecontainer.replaceChildren();
 
       const pokeMessageError = document.createElement('div');
@@ -136,12 +136,12 @@ const generatorHTML = (pokecontainer, pokemonList) => {
       const messageErrorText = document.createElement('p');
             messageErrorText.classList.add('messageErrorText')
 
-      messageErrorText.innerHTML = "We found no matches, try typing only the full name of a pokemon";
+      messageErrorText.innerHTML = "We found no matches for "  +"\""+inputName+"\""+ ", try typing only the full name of a pokemon";
 
       pokeMessageError.append(messageErrorText);
       pokecontainer.append(pokeMessageError);
 
-    }*/
+    }
 
 //función generator le doy como parametros el div pokemonDiv y la pokemonList
 generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
@@ -180,8 +180,15 @@ document.getElementById('type').addEventListener('change',(e)=>{
 let inputName = document.getElementById('search');//inicializa acceso a DOM
 const searchSubmit = document.getElementById('searchSubmit');
 searchSubmit.addEventListener('click', () =>{
+  console.log(inputName)
+  let listFilter = searchByName(pokemonData, inputName.value);
+  if(listFilter.length > 0 ){
+    generatorHTMLCard(document.getElementById('pokemonDiv'), listFilter);
+  }else{
+    generatorHTMLErrorMessage(document.getElementById('pokemonDiv'), inputName.value);
+  }
   //incluir variable "llena" con .value
-   generatorHTMLCard(document.getElementById('pokemonDiv'), searchByName(pokemonData, inputName.value));
+
   //vaciar input textbox después de dar click al botón
    inputName.value = '';
 });
