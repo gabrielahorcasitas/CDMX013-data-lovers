@@ -134,11 +134,14 @@ const generatorHTML = (pokecontainer, pokemonList) => {
       const pokeMessageError = document.createElement('div');
             pokeMessageError.classList.add('messageErrorBox');
       const messageErrorText = document.createElement('p');
-            messageErrorText.classList.add('messageErrorText')
+            messageErrorText.classList.add('messageErrorText');
+      const messageErrorGif = document.createElement('div');
+            messageErrorGif.classList.add('messageErrorGif');
 
-      messageErrorText.innerHTML = "We found no matches for "  +"\""+inputName+"\""+ ", try typing only the full name of a pokemon";
+      messageErrorText.innerHTML = "We found no matches for "  +"\""+inputName+"\","+ "<br/>" + "try typing only the full name of a pokemon";
+      messageErrorGif.innerHTML = "<img src = images/error.gif >";
 
-      pokeMessageError.append(messageErrorText);
+      pokeMessageError.append(messageErrorText, messageErrorGif);
       pokecontainer.append(pokeMessageError);
 
     }
