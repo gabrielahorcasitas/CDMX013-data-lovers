@@ -1,40 +1,57 @@
-
-import data from './data/pokemon/pokemon.js';
+import data from './data/pokemon/pokemon.js'; //importar nuestra data pokemon;
+//importar funciones de data.js;
 import {filterByRegion,filterByType, searchByName,sortAZ,sortZA,sortNum,sortNumInverse,calculatorSTAB,calculatorDPS,calculatorEPS} from './data.js'
 
+//guardar en variable data situandonos en cada pokemon;
+//let porque estamos manipulando su orden con la función de ordenado;
 let pokemonData= data.pokemon;
 
 //pokecontainer es pokemondiv y pokemonlist es la lista de objetos en objeto pokemon
+//función que muestra en html data
 const generatorHTML = (pokecontainer, pokemonList) => {
+
+  //limpiar el pokecontainer para desplegar nuevo contenido cuando se filtre,ordene, etc., y visceversa;
   pokecontainer.replaceChildren();
+
+  //iterador sobre data pokemon;
     for(let i=0; i<pokemonList.length; i++){
+
+      //índice en el que se encuentra el iterador (en este caso sobre un pokemon específico);
       let pokemonObject = pokemonList[i];
 
-      let pokeIndividual = document.createElement('div');
+      //generación de cajas para los keys(propiedades) y valores de los objetos en pokemon data;
+      const pokeIndividual = document.createElement('div');
+      //generación de clases para las cajas;
       pokeIndividual.classList.add("pokemonIndividual");
 
-      let pokemonImageDiv = document.createElement('div');
+      const pokemonImageDiv = document.createElement('div');
           pokemonImageDiv.classList.add("imagePokemon");
-      let pokemonNameDiv = document.createElement('div');
+      const pokemonNameDiv = document.createElement('div');
           pokemonNameDiv.classList.add("namePokemon");
-      let pokemonNumDiv = document.createElement('div');
+      const pokemonNumDiv = document.createElement('div');
           pokemonNumDiv.classList.add("numPokemon");
-      let pokemonTypeDiv = document.createElement('div');
+      const pokemonTypeDiv = document.createElement('div');
           pokemonTypeDiv.classList.add("typePokemon");
 
+      //función para sustituir tipo escrito por ícono de tipo;
       const typePokemon = (typeEachPokemon) => {
+        //variable vacia para ir guardando ícono correspondiente encada iteración;
         let eachTypeImg = "";
+          //for each para iterar cada tipo en cada pokemon y detecta ícono que hace match;
           typeEachPokemon.forEach((elementImg) => {
             eachTypeImg += "<img src=images/types/types/"+elementImg+".png alt=type pokemon/>";
           });
           return eachTypeImg;
         };
 
+      //qué contenido se va a mostrar en cada caja en html
       pokemonImageDiv.innerHTML = "<img src=" + pokemonObject["img"] + " width=\"120px\" height=\"120px\">";
       pokemonNameDiv.innerHTML = pokemonObject["name"];
       pokemonNumDiv.innerHTML = pokemonObject["num"];
+      //contenido de type es igual al ícono que arroja la función de typePokemon;
       pokemonTypeDiv.innerHTML = typePokemon(pokemonObject["type"]);
 
+      //anexar contenido a otro contenedor con append;
       pokeIndividual.append( pokemonNumDiv, pokemonImageDiv, pokemonNameDiv, pokemonTypeDiv);
       pokecontainer.append(pokeIndividual);
 
@@ -42,44 +59,48 @@ const generatorHTML = (pokecontainer, pokemonList) => {
   //return pokecontainer//---no hace falta, es redundante, pokecontainer es el pokemon div que en un inicio pusimos como parámetro
   }
 
+//función generator le doy como parametros el div pokemonDiv y la pokemonList
+generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
+
+  //función que genera el html a mostrar cuando se busca por nombre - se muestra una carta más completa del pokemon;
   const generatorHTMLCard = (pokecontainer, pokemonList) => {
     pokecontainer.replaceChildren();
       for(let i=0; i<pokemonList.length; i++){
         let pokemonObject = pokemonList[i];
 
-        let pokeIndividual = document.createElement('div');
+        const pokeIndividual = document.createElement('div');
         pokeIndividual.classList.add("pokemonIndividualCard");
 
-        let pokemonBasics = document.createElement('div');
+        const pokemonBasics = document.createElement('div');
         pokemonBasics.classList.add('pokemonBasics');
 
-          let pokemonImageDiv = document.createElement('div');
+          const pokemonImageDiv = document.createElement('div');
               pokemonImageDiv.classList.add("imagePokemon");
-          let pokemonNameDiv = document.createElement('div');
+          const pokemonNameDiv = document.createElement('div');
               pokemonNameDiv.classList.add("namePokemon");
-          let pokemonTypeDiv = document.createElement('div');
+          const pokemonTypeDiv = document.createElement('div');
               pokemonTypeDiv.classList.add("typePokemon");
 
-          let pokemonMiniAboutDiv = document.createElement('div');
+          const pokemonMiniAboutDiv = document.createElement('div');
               pokemonMiniAboutDiv.classList.add('pokemonMiniAbout');
 
-            let pokemonGenerationDiv = document.createElement('div');
+            const pokemonGenerationDiv = document.createElement('div');
                 pokemonGenerationDiv.classList.add('generationPokemon');
-            let pokemonWeigthDiv = document.createElement('div');
+            const pokemonWeigthDiv = document.createElement('div');
                 pokemonWeigthDiv.classList.add('weigthPokemon');
-            let pokemonHeigthDiv = document.createElement('div');
+            const pokemonHeigthDiv = document.createElement('div');
                 pokemonHeigthDiv.classList.add('heigthPokemon');
 
-        let pokemonDetails = document.createElement('div');
+        const pokemonDetails = document.createElement('div');
         pokemonDetails.classList.add('pokemonDetails');
 
-        let pokemonNumDiv = document.createElement('div');
+        const pokemonNumDiv = document.createElement('div');
             pokemonNumDiv.classList.add("numPokemonCard");
-        let pokemonAboutDiv = document.createElement('div');
+        const pokemonAboutDiv = document.createElement('div');
             pokemonAboutDiv.classList.add('aboutPokemon');
-        let pokemonStatsDiv = document.createElement('div');
+        const pokemonStatsDiv = document.createElement('div');
             pokemonStatsDiv.classList.add('statsPokemon');
-        let pokemonAttackName = document.createElement('table');
+        const pokemonAttackName = document.createElement('table');
             pokemonAttackName.classList.add('pokemonAttack');
 
         const typePokemon = (typeEachPokemon) => {
@@ -99,21 +120,33 @@ const generatorHTML = (pokecontainer, pokemonList) => {
         pokemonHeigthDiv.innerHTML = "<img src=images/height.png >" +" "+ pokemonObject["size"]["height"];
         pokemonWeigthDiv.innerHTML = "<img src=images/weight.png >" +" "+ pokemonObject["size"]["weight"];
         pokemonAboutDiv.innerHTML = pokemonObject["about"];
+        //span para dar estilo a encabezado de tabla;
         pokemonStatsDiv.innerHTML = "<span class=attacksTitle>Special Attacks</span>";
+        //generación de header de tabla (etiqueta tr se refiere a rows, y etiqueta th a columns);
         pokemonAttackName.innerHTML = "<tr>"+"<th class=headerTable>Name</th>"+"<th class=headerTable>STAB</th>"+"<th class=headerTable>DPS</th>"+"<th class=headerTable>EPS</th>"+"</tr>";
 
+        //variable vacia en la que se ira generando tabla con estadísticas a mostrar en html;
         let attackhtml= "";
+        //variable para guardar los ataques especiales de cada pokemon;
         let specialAttacks=pokemonObject["special-attack"];
 
-
+        //for que itera sobre los ataques especiales de cada pokemon;
+        //variable attack tiene ataque en el que se esta "parado" en cada iteración;
         for (let attack of specialAttacks){
+          //en cada ciclo se guardan los ataques en la variable declarada para mostrarlos en html;
           attackhtml+=
+                      //columna que corresponde a nombres de ataques;
                       "<tr>"+"<th><span class=attackNameTable>"+attack.name+"</span></th>"+
+                      //función que obtiene cálculo stab y muestra resultado dentro de tabla en su columna y fila correspondiente;
                       "<th><span class=attackStats>"+calculatorSTAB(attack ["base-damage"], attack ["type"], pokemonObject["type"])+"</span></th>"+
+                      //función que obtiene cálculo dpsy muestra resultado dentro de tabla en su columna y fila correspondiente;
                       "<th><span class=attackStats>"+calculatorDPS(attack ["base-damage"], attack ["type"],pokemonObject["type"], attack["move-duration-seg"])+"</span></th>"+
+                      //función que obtiene cálculo eps y muestra resultado dentro de tabla en su columna y fila correspondiente;
                       "<th><span class=attackStats>"+calculatorEPS(attack ["energy"], attack["move-duration-seg"])+"</span></th>"+
                       "</tr>";
         }
+
+        //modifcamos html para agregar contenido de tabla obtenido por el iterador;
         pokemonAttackName.innerHTML = pokemonAttackName.innerHTML + attackhtml;
 
         pokeIndividual.append(pokemonBasics, pokemonDetails);
@@ -127,6 +160,7 @@ const generatorHTML = (pokecontainer, pokemonList) => {
     //return pokecontainer//---no hace falta porque es redundante, pokecontainer es el pokemon div que en un inicio de puse como parámetro
     }
 
+    //función que genera mensaje de error si el input del usuario no hace match con ningún pokemon;
     const generatorHTMLErrorMessage = (pokecontainer,inputName) =>{
 
       pokecontainer.replaceChildren();
@@ -138,6 +172,7 @@ const generatorHTML = (pokecontainer, pokemonList) => {
       const messageErrorGif = document.createElement('div');
             messageErrorGif.classList.add('messageErrorGif');
 
+      //añadir entre el texto del paragraph el input entre comillas del usuario que no fue encontrado;
       messageErrorText.innerHTML = "We found no matches for "  +"\""+inputName+"\","+ "<br/>" + "try typing only the full name of a pokemon";
       messageErrorGif.innerHTML = "<img src = images/error.gif >";
 
@@ -146,57 +181,66 @@ const generatorHTML = (pokecontainer, pokemonList) => {
 
     }
 
-//función generator le doy como parametros el div pokemonDiv y la pokemonList
-generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
+//variable donde guardamos el elemento con id region;
+//const selectRegion = document.getElementById('region');
 
-//document.getElementById("filtrate").addEventListener('click', dropdownF);
+let dataFiltrada = [];
 
-const selectRegion = document.getElementById('region');
+//listener de evento (change en el select con id de region);
 document.getElementById('region').addEventListener('change',(e)=>{
+  //regresar a default el select de type cuando den click en select de region;
   selectType.selectedIndex = "0";
+  //si dan click en option de show all volver mostrar data completa;
   if (e.target.value === "Show All") {
     generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
+  //y si dan click a opciones de region, mostrar data filtrada por opción elegida;
   }else{
-    generatorHTML(document.getElementById('pokemonDiv'), filterByRegion(e.target.value, pokemonData));
+    dataFiltrada = filterByRegion(e.target.value, dataFiltrada.length == 0 ? pokemonData : dataFiltrada);
+    generatorHTML(document.getElementById('pokemonDiv'), dataFiltrada);
   }
-
 });
 
+//variable donde guardamos el elemento con id type;
 const selectType = document.getElementById('type');
+
+//listener de evento (change en el select con id de type);
 document.getElementById('type').addEventListener('change',(e)=>{
-  selectRegion.selectedIndex = "0";
+  //regresar a default el select de region cuando den click en select de type;
+  //selectRegion.selectedIndex = "0";
+  //si dan click en option de show all volver mostrar data completa;
   if (e.target.value === "Show All") {
     generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
+  //y si dan click a opciones de type, mostrar data filtrada por opción elegida;
   }else{
-    generatorHTML(document.getElementById('pokemonDiv'), filterByType(e.target.value, pokemonData));
+    //resetear la data para esa propiedad: cuando le pasamos un nuevo tipo, que nos devuelva toda la data sin ese filtro
+    //pasar filtro como null/vacio 
+    dataFiltrada = filterByType(e.target.value, dataFiltrada.length == 0 ? pokemonData : dataFiltrada);
+    generatorHTML(document.getElementById('pokemonDiv'), dataFiltrada);
   }
 });
 
-//Esta es una 2da. opcion
-/*document.getElementById("region").addEventListener('change',(e)=>{
-  let filteredRegion = filteredOut(e.target.value, pokemonList, "region");
-  console.log(filteredRegion);
-
-})*/
-
-//funcionalidad para buscador por nombre (search by name)
-let inputName = document.getElementById('search');//inicializa acceso a DOM
+//funcionalidad para buscador por nombre (search by name);
+let inputName = document.getElementById('search');//inicializa acceso a DOM;
+//listener de click en botón de submit(lupita);
 const searchSubmit = document.getElementById('searchSubmit');
 searchSubmit.addEventListener('click', () =>{
+  //variable que guarda valor del input ingresado y lo envia como parámetro a función searchByName;
   let listFilter = searchByName(pokemonData, inputName.value);
+  //si en la variable listFilter hay resultado(coincidencias) mostrar tarjeta pokemon; 
   if(listFilter.length > 0 ){
     generatorHTMLCard(document.getElementById('pokemonDiv'), listFilter);
+  //si no hay coincidencias mostrar mensaje de error;
   }else{
     generatorHTMLErrorMessage(document.getElementById('pokemonDiv'), inputName.value);
   }
-  //incluir variable "llena" con .value
-
   //vaciar input textbox después de dar click al botón
    inputName.value = '';
 });
 
 //funcionalidad a botón de ordenar
+//listener al haber cambio en el select con id de order;
 document.getElementById('order').addEventListener('change',(e)=>{
+  //mostrar data según función de ordenado seleccionada;
     generatorHTML(document.getElementById('pokemonDiv'), sortNum(e.target.value, pokemonData));
     generatorHTML(document.getElementById('pokemonDiv'), sortAZ(e.target.value, pokemonData));
     generatorHTML(document.getElementById('pokemonDiv'), sortZA(e.target.value, pokemonData));
@@ -208,7 +252,7 @@ document.getElementById('pokemonLogo').addEventListener('click', ()=>{
     generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
 });
 
-//Limpia filtros y regresa a página principal al dar click
+/*Limpia filtros y regresa a página principal al dar click
 document.getElementById('clearButton').addEventListener('click', () => {
   generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
-});
+});*/
