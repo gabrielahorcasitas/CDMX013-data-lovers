@@ -59,8 +59,28 @@ const generatorHTML = (pokecontainer, pokemonList) => {
   //return pokecontainer//---no hace falta, es redundante, pokecontainer es el pokemon div que en un inicio pusimos como parámetro
   }
 
-//función generator le doy como parametros el div pokemonDiv y la pokemonList
-generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
+  //variables que tienen la opción de select que muestra la data en default (si no son iguales a estos valores, se corren los filtros/sorts);
+  let typeFilter = "Show All";
+  let regionFilter = "Show All";
+  let orderFilter = "#Pokedex";
+
+  const renderFilteredHTML = () => {
+    //scope de datafiltrada es local a la función de renderFilteredHTML;
+    let dataFiltrada = pokemonData;
+    //si se intenta filtrar por show all regresa la data sin filtrar, si no la filtra por la op. seleccionada;
+    dataFiltrada = regionFilter == "Show All" ? dataFiltrada : filterByRegion(regionFilter, dataFiltrada);
+    dataFiltrada = typeFilter == "Show All" ? dataFiltrada : filterByType(typeFilter, dataFiltrada);
+    //las funciones de ordenado ya tienen condicionales para correrse dentro de c/función;
+    dataFiltrada = sortNum(orderFilter, dataFiltrada);
+    dataFiltrada = sortAZ(orderFilter, dataFiltrada);
+    dataFiltrada = sortZA(orderFilter, dataFiltrada);
+    dataFiltrada = sortNumInverse(orderFilter, dataFiltrada);
+    //renderiza el html según los filtros y orden usado;
+    generatorHTML(document.getElementById('pokemonDiv'), dataFiltrada);
+  }
+  
+  //renderiza función generator con parámetros div pokemonDiv y la pokemonList, por primera vez;
+  renderFilteredHTML();
 
   //función que genera el html a mostrar cuando se busca por nombre - se muestra una carta más completa del pokemon;
   const generatorHTMLCard = (pokecontainer, pokemonList) => {
@@ -173,7 +193,7 @@ generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
             messageErrorGif.classList.add('messageErrorGif');
 
       //añadir entre el texto del paragraph el input entre comillas del usuario que no fue encontrado;
-      messageErrorText.innerHTML = "We found no matches for "  +"\""+inputName+"\","+ "<br/>" + "try typing only the full name of a pokemon";
+      messageErrorText.innerHTML = "We found no matches for "  +"\" "+inputName+" \","+ "<br/>" + "try typing only the full name of a pokémon";
       messageErrorGif.innerHTML = "<img src = images/error.gif >";
 
       pokeMessageError.append(messageErrorText, messageErrorGif);
@@ -182,41 +202,23 @@ generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
     }
 
 //variable donde guardamos el elemento con id region;
-//const selectRegion = document.getElementById('region');
-
-let dataFiltrada = [];
-
+const selectRegion = document.getElementById('region');
 //listener de evento (change en el select con id de region);
 document.getElementById('region').addEventListener('change',(e)=>{
-  //regresar a default el select de type cuando den click en select de region;
-  selectType.selectedIndex = "0";
-  //si dan click en option de show all volver mostrar data completa;
-  if (e.target.value === "Show All") {
-    generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
-  //y si dan click a opciones de region, mostrar data filtrada por opción elegida;
-  }else{
-    dataFiltrada = filterByRegion(e.target.value, dataFiltrada.length == 0 ? pokemonData : dataFiltrada);
-    generatorHTML(document.getElementById('pokemonDiv'), dataFiltrada);
-  }
+  //regionFilter deja de tener valor default "Show All" y toma el target.value, con lo que se corre la función (ver línea 71);
+  regionFilter = e.target.value;
+  //se corre función render con el nuevo valor en regionFilter;
+  renderFilteredHTML();
 });
 
 //variable donde guardamos el elemento con id type;
 const selectType = document.getElementById('type');
-
 //listener de evento (change en el select con id de type);
 document.getElementById('type').addEventListener('change',(e)=>{
-  //regresar a default el select de region cuando den click en select de type;
-  //selectRegion.selectedIndex = "0";
-  //si dan click en option de show all volver mostrar data completa;
-  if (e.target.value === "Show All") {
-    generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
-  //y si dan click a opciones de type, mostrar data filtrada por opción elegida;
-  }else{
-    //resetear la data para esa propiedad: cuando le pasamos un nuevo tipo, que nos devuelva toda la data sin ese filtro
-    //pasar filtro como null/vacio 
-    dataFiltrada = filterByType(e.target.value, dataFiltrada.length == 0 ? pokemonData : dataFiltrada);
-    generatorHTML(document.getElementById('pokemonDiv'), dataFiltrada);
-  }
+  //typeFilter deja de tener valor default "Show All" y toma el target.value, con lo que se corre la función (ver línea 72);
+  typeFilter = e.target.value;
+  //se corre función render con el nuevo valor en typeFilter;
+  renderFilteredHTML();
 });
 
 //funcionalidad para buscador por nombre (search by name);
@@ -238,21 +240,39 @@ searchSubmit.addEventListener('click', () =>{
 });
 
 //funcionalidad a botón de ordenar
+const selectOrder = document.getElementById('order');
 //listener al haber cambio en el select con id de order;
 document.getElementById('order').addEventListener('change',(e)=>{
-  //mostrar data según función de ordenado seleccionada;
-    generatorHTML(document.getElementById('pokemonDiv'), sortNum(e.target.value, pokemonData));
-    generatorHTML(document.getElementById('pokemonDiv'), sortAZ(e.target.value, pokemonData));
-    generatorHTML(document.getElementById('pokemonDiv'), sortZA(e.target.value, pokemonData));
-    generatorHTML(document.getElementById('pokemonDiv'), sortNumInverse(e.target.value, pokemonData));
+  //orderFilter deja de tener valor default "#Pokedex" y toma el target.value, con lo que se corre la función (ver función renderFilteredHTML);
+  orderFilter = e.target.value;
+  //se corre función render con el nuevo valor en orderFilter;
+  renderFilteredHTML();
 });
 
-//Regresa a pagina principal al dar click en el logotipo
+//Regresa a página principal al dar click en el logotipo
 document.getElementById('pokemonLogo').addEventListener('click', ()=>{
-    generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
+  //que el select muestre el contenido en su índice 0 ;
+  selectRegion.selectedIndex = "0";
+  selectType.selectedIndex = "0";
+  selectOrder.selectedIndex = "0";
+  //las variables se resetean a su valor default;
+  typeFilter = "Show All";
+  regionFilter = "Show All";
+  orderFilter = "#Pokedex";
+  //el render corre de nuevo con los valores en default;
+  renderFilteredHTML();
 });
 
-/*Limpia filtros y regresa a página principal al dar click
+//Limpia filtros y regresa a página principal al dar click
 document.getElementById('clearButton').addEventListener('click', () => {
-  generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
-});*/
+  //que el select muestre el contenido en su índice 0 ;
+  selectRegion.selectedIndex = "0";
+  selectType.selectedIndex = "0";
+  selectOrder.selectedIndex = "0";
+  //las variables se resetean a su valor default;
+  typeFilter = "Show All";
+  regionFilter = "Show All";
+  orderFilter = "#Pokedex";
+  //el render corre de nuevo con los valores en default;
+  renderFilteredHTML();
+});

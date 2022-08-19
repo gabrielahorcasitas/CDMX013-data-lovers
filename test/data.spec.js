@@ -248,17 +248,12 @@ const orderNameInvTwo = [
   }
 ];
 
-//const conditionOrder = "A-Z";
-//const conditionOrderError = "C-D";
-
 const mockTypeDamage = 45;
 const mockTypeAttackType = "water";
 const mockTypePokemonType = "water";
 const mockTypePokemonTypeDiff = "fire";
 const mockTypeTime = 2.6;
 const mockTypeEnergy = -33;
-
-
 
 it('debería ser un objeto', () => {
     expect(typeof data).toBe('object');
@@ -294,12 +289,12 @@ describe('filterByRegion', () => {
 
   it('debería filtrar por kanto', () =>{
     const runFilterRegion = filterByRegion('kanto', dataMock.pokemon)
-    expect(runFilterRegion.length).toBe(3)
+    expect(runFilterRegion.length).toBe(3);
   });
 
   test('debería retornar un arreglo de pokemon de la región kanto', () =>{
     const runFilterRegion = filterByRegion('kanto', dataMock.pokemon)
-    expect(runFilterRegion).toEqual(dataMock.pokemon)
+    expect(runFilterRegion).toEqual(dataMock.pokemon);
   });
 
 });
@@ -312,12 +307,12 @@ describe('filterByType', () => {
 
   test('filtrar por grass',()=>{
     const runFilterType = filterByType('grass',dataMock.pokemon)
-    expect(runFilterType.length).toBe(3)
+    expect(runFilterType.length).toBe(3);
   });
 
   test('filtrar por fire',()=>{
     const runFilterType = filterByType('fire',dataMock.pokemon)
-    expect(runFilterType.length).toBe(0)
+    expect(runFilterType.length).toBe(0);
   });
 
   test('debería retornar [] al no encontrar coincidencias con el tipo grass', () => {
@@ -336,12 +331,12 @@ test('debería ser una función', () => {
 
   test('filtrar por input de name',()=>{
     const runFilterName = searchByName(dataMock.pokemon, 'bulbasaur')
-    expect(runFilterName.length).toBe(1)
+    expect(runFilterName.length).toBe(1);
   });
 
   test('filtrar por type debería regresar 0',()=>{
     const runFilterName = searchByName(dataMock.pokemon, 'fire')
-    expect(runFilterName.length).toBe(0)
+    expect(runFilterName.length).toBe(0);
   });
 
 });
@@ -363,9 +358,6 @@ describe('Corroborar funciones de ordenado alfabeticamente (A-Z/Z-A)',() =>{
   it('si no se cumple condición en sortAZ ordena al inverso', () => {
     expect(sortAZ('Z-A', orderName)).toEqual(orderName);
   });
-
-
-
 
   it('sortZA debería ser una función', () => {
     expect(typeof sortZA).toBe('function');
@@ -406,17 +398,15 @@ describe('Corroborar funciones de ordenado alfabeticamente (A-Z/Z-A)',() =>{
   it('si no se cumple sortNumInverse debería ordenar al inverso',() => {
     expect(sortNumInverse('#Pokedex Inverse', orderNumTwo)).toEqual(orderNumTwo);
   });
+
   it('si no se cumple sortNumInverse debería ordenar al inverso',() => {
     expect(sortNumInverse('#Pokedex', orderNumTwo)).toEqual(orderNumTwo);
   });
 
-  /*it('si no se cumple condición #Pokedex Inverse, debería no ordenar', () => {
-    expect(sortNumInverse(conditionOrderError, orderNumTwo)).toEqual(orderNumTwo);
-  });*/
-
 });
 
 describe('Corroborar funciones cálculos estadísticos',() =>{
+  
   test('calculatorSTAB debería ser una función', () => {
     expect(typeof calculatorSTAB).toBe('function');
   });
