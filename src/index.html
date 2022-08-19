@@ -9,7 +9,7 @@
 
   <body>
     <!-- Barra navegadora de la página-->
-  <header class="barra">
+  <header class="navBar">
      <div class= "logos">
       <img src="images/pokemon.png" id = "pokemonLogo"/>
       <img src="images/go.png" id = "goLogo"/>
@@ -21,19 +21,16 @@
         <input type = "text" id="search" placeholder="Search only by name" />
         <input type = "submit" id= "searchSubmit" value = "&#128269;"/>
         </div>
-        <div class = "bottoms">
-        <div class= "labelOrder">
-        <select id="order">
-         <option selected disabled>Order</option>
-         <option>A-Z</option>
-         <option>Z-A</option>
-         <option>#Pokedex</option>
-         <option>#Pokedex Inverse</option>
-        </select>
-       </div>
         <div class= "labelFilters">
          <label>Filters</label>
          <div class= "selectsFilters">
+            <select id="order">
+             <option selected disabled>Order</option>
+             <option>A-Z</option>
+             <option>Z-A</option>
+             <option>#Pokedex</option>
+             <option>#Pokedex Inverse</option>
+            </select>
           <select id="region">
            <option selected disabled>Region</option>
            <option>Kanto</option>
@@ -62,9 +59,9 @@
            <option>Steel</option>
            <option>Show All</option>
          </select>
+        <button id= "clearButton">Clear</button>
         </div>
       </div>
-    </div>
     </div>
 
   </header>

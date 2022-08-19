@@ -183,7 +183,6 @@ document.getElementById('type').addEventListener('change',(e)=>{
 let inputName = document.getElementById('search');//inicializa acceso a DOM
 const searchSubmit = document.getElementById('searchSubmit');
 searchSubmit.addEventListener('click', () =>{
-  console.log(inputName)
   let listFilter = searchByName(pokemonData, inputName.value);
   if(listFilter.length > 0 ){
     generatorHTMLCard(document.getElementById('pokemonDiv'), listFilter);
@@ -207,4 +206,9 @@ document.getElementById('order').addEventListener('change',(e)=>{
 //Regresa a pagina principal al dar click en el logotipo
 document.getElementById('pokemonLogo').addEventListener('click', ()=>{
     generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
+});
+
+//Limpia filtros y regresa a página principal al dar click
+document.getElementById('clearButton').addEventListener('click', () => {
+  generatorHTML(document.getElementById('pokemonDiv'), pokemonData);
 });
