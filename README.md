@@ -6,13 +6,13 @@
 * [2. Investigación de UX](#2-investigación-de-ux)
 * [3. Trabajo Colaborativo](#3-trabajo-colaborativo)
 * [4. Historias de Usuario](#4-historias-de-usuario)
- * [4.1 Historia de usuario 1](#41-historia-de-usuario-1)
- * [4.2 Historia de usuario 2](#42-historia-de-usuario-2)
- * [4.3 Historia de usuario 3](#43-historia-de-usuario-3)
- * [4.4 Historia de usuario 4](#44-historia-de-usuario-4)
- * [4.5 Historia de usuario 5](#45-historia-de-usuario-5)
- * [4.6 Historia de usuario 6](#46-historia-de-usuario-6)
- * [4.7 Historia de usuario 7](#47-historia-de-usuario-7)
+  * [4.1 Historia de usuario 1](#41-historia-de-usuario-1)
+  * [4.2 Historia de usuario 2](#42-historia-de-usuario-2)
+  * [4.3 Historia de usuario 3](#43-historia-de-usuario-3)
+  * [4.4 Historia de usuario 4](#44-historia-de-usuario-4)
+  * [4.5 Historia de usuario 5](#45-historia-de-usuario-5)
+  * [4.6 Historia de usuario 6](#46-historia-de-usuario-6)
+  * [4.7 Historia de usuario 7](#47-historia-de-usuario-7)
 * [5. Pruebas Unitarias](#5-pruebas-unitarias)
 * [6. Objetivos de Aprendizaje](#6-objetivos-de-aprendizaje)
 * [7. Vista Final de proyecto](#7-vista-final-de-proyecto)
@@ -49,7 +49,7 @@ Hicimos columnas de OA’s, project backlog, sprint backlog, doing, done, bloque
 
 ## 4. Historias de Usuario
 
-### 4.1. Historia de usuario 1
+### 4.1 Historia de Usuario 1
 
 **CARD**
 * Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
@@ -93,7 +93,7 @@ En el footer se muestra el copyright de la marca Pokémon Go, y lo que serían l
 
 Para esta HU, investigamos qué son los objetos y los arrays para poder extraer los elementos de interés de la data, así como poder mostrarlos en la sección main del HTML. Para dar estilo a estos elementos también investigamos el modelo de la caja en CSS, particularmente flex-box.
 
-### 4.2 Historia de usuario 2
+### 4.2 Historia de Usuario 2
 
 **CARD**
 * Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
@@ -129,7 +129,7 @@ Los pokemones se muestran en la misma tarjeta diseñada y codeada desde la HU1.
 
 Buscamos qué métodos podíamos emplear para poder filtrar la data de acuerdo a la opción que seleccionaba la usuaria. Encontramos en método filter () y fue el que empleamos en ambas funciones de filtrado.
 
-### 4.3 Historia de usuario 3
+### 4.3 Historia de Usuario 3
 
 **CARD**
 * Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
@@ -163,7 +163,7 @@ Le dimos un color diferente a la región y generación para hacer resaltar esta 
 
 Para esta historia investigamos cómo filtrar con el método filter, teniendo como argumento un input text (el nombre del pokémon) de la usuaria, para mostrar únicamente la tarjeta del pokémon buscado.
 
-### 4.4 Historia de Usuaria 4
+### 4.4 Historia de Usuario 4
 
 **CARD**
 * Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
@@ -199,7 +199,7 @@ Dentro del mensaje se muestra el input que se escribió para que la usuaria not�
 Tuvimos que crear una sección de html a mostrar cuando se detectara el error el input ingresado. A la vez en esta sección tuvimos que encontrar la manera de retornar el mismo input ingresado dentro del mensaje de error.
 
 
-### 4.5 Historia de Usuaria 5
+### 4.5 Historia de Usuario 5
 
 **CARD**
 * Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
@@ -232,7 +232,7 @@ En este prototipo le dimos estilo al select que despliega las opciones de ordena
 Investigamos el método de sort() para poder ordenar según los valores de la data a considerar a partir de la opción seleccionada, creando 4 funciones de orden (una por cada tipo).
 
 
-### 4.6 Historia de Usuaria 6
+### 4.6 Historia de Usuario 6
 
 **CARD**
 * Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
@@ -271,7 +271,7 @@ También hicimos uso de condicionales para que se aplicaran las operaciones corr
 
 Por otra parte, buscamos cómo generar tablas dinámicas para que estas se vincularan y actualizarán a partir de las funciones de cálculo, mostrando en ellas los resultados obtenidos para cada dato de ataque especial.
 
-### 4.7 Historia de Usuaria 7
+### 4.7 Historia de Usuario 7
 
 **CARD**
 * Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
