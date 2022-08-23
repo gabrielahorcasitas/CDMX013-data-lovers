@@ -15,7 +15,7 @@
   * [4.7 Historia de Usuario 7](#47-historia-de-usuario-7)
 * [5. Pruebas Unitarias](#5-pruebas-unitarias)
 * [6. Objetivos de Aprendizaje](#6-objetivos-de-aprendizaje)
-* [7. Vista Final de proyecto](#7-vista-final-de-proyecto)
+* [7. Vista final del proyecto](#7-vista-final-del-proyecto)
 
 ***
 
@@ -310,9 +310,9 @@ Dependiendo de qué funciones estábamos testeando se desarrollaron los test par
 
 ![](<./ImgREADME/PruebasUnitarias.png>)
 
-## 7. Vista Final del proyecto
+## 7. Vista final del proyecto
 
-[loom de funcionamiento de la pagina web] https://www.loom.com/share/c5c2cc6d9b0548ecb0f0c64078c94f88
+[loom de funcionamiento de la pagina web](https://www.loom.com/share/c5c2cc6d9b0548ecb0f0c64078c94f88)
 
 
 ### HTML
