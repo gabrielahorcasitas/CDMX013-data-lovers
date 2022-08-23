@@ -312,7 +312,7 @@ Dependiendo de qué funciones estábamos testeando se desarrollaron los test par
 
 ## 7. Vista Final del proyecto
 
-https://www.loom.com/share/c5c2cc6d9b0548ecb0f0c64078c94f88
+[loom de funcionamiento de la pagina web] https://www.loom.com/share/c5c2cc6d9b0548ecb0f0c64078c94f88
 
 
 ### HTML
