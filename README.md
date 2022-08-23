@@ -2,90 +2,312 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Consideraciones técnicas](#6-consideraciones-técnicas)
-* [7. Pistas, tips y lecturas complementarias](#7-pistas-tips-y-lecturas-complementarias)
+* [1. Preámbulo del proyecto]
+* [2. Investigación de UX]
+* [3. Trabajo Colaborativo]
+* [4. Historias de Usuario]
+ * [Historia de usuario 1]
+ * [Historia de usuario 2]
+ * [Historia de usuario 3]
+ * [Historia de usuario 4]
+ * [Historia de usuario 5]
+ * [Historia de usuario 6]
+ * [Historia de usuario 7]
+* [5. Pruebas Unitarias]
+* [6. Objetivos de Aprendizaje]
+* [7. Vista Final de proyecto](#7-pistas-tips-y-lecturas-complementarias)
 
 ***
 
-## 1. Preámbulo
+## 1.  Preámbulo del proyecto
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de _terabytes_ de datos, una cifra sin
-precedentes.
+Este proyecto tuvo como objetivo el aprender a manipular un conjunto de datos (set de datos o data) para hacerlos accesibles a través de una página web de utilidad para usuarias específicas.
+El corazón del proyecto constó de mostrar, filtrar, y ordenar los elementos que constituyen la base de datos, así como hacer cálculos a partir de la misma data.
+Como dupla elegimos la temática de Pokémon Go, por lo que el set de datos manipulado gira entorno a data sobre aspectos de pelea, tamaño, región, tipo, etc., de 251 pokemones.
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
+## 2. Investigación de UX
 
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y comprensible para las usuarias
-al lado derecho.
+Las usuarias objetivo de la página web son aquellas interesadas en obtener información acerca de los pokemones encontrados en el juego de Pokémon Go.
 
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
+La data que se muestra en esta página web permite a la usuaria familiarizarse con información de relevancia para su experiencia como entrenadora virtual de Pokémon Go, específicamente sobre los 251 pokemones de las primeras dos generaciones Pokémon.
 
-## 2. Resumen del proyecto
+Entre los datos de interés que se pueden visualizar se encuentran las estadísticas de ataques especiales de cada Pokémon.
 
-En este proyecto aprenderás a manipular un conjunto de datos (_set_ de datos)
-para hacerlos accesibles a través de una _página web_ de utilidad para tus usuarias.
+Las estadísticas mostradas son acerca del STAB (Same Type Attack Bonus) que es la unificación de ataque del mismo tipo, sobre el DPS (Damage Per Second) o daño por segundo, y sobre el EPS (Energy Per Second) que es la energía gastada por ataque pokémon en una pelea.
 
-Tendrás que construir una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a mostrar información aún más relevante para los usuarios
-(promedio, el valor máximo o mínimo, etc).
+Esta información le ayudará a la usuaria a saber cuál estrategia de pelea implementar en sus partidas de Pokémon Go, de acuerdo al pokémon contrincante y al pokémon campeón elegido para la batalla.
 
-Te proponemos una serie de datos de diferentes _temáticas_ para que
-los explores y decidas con cuáles te interesa trabajar. Hemos elegido
-específicamente estos _sets_ de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
 
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
+## 3. Trabajo Colaborativo
 
-Estos son datos que te proponemos:
+Para la elaboración de este proyecto, primeramente acordamos horarios de trabajo colaborativo e individual. Para ello utilizamos la herramienta Trello, en la cual organizamos las tareas a realizar día con día, a lo largo de cada sprint, según las Historias de Usuaria diseñadas para alcanzar los objetivos de este proyecto.
 
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  * [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
+Asimismo, categorizamos por etiquetas las tareas a realizar a partir de lo que engloba el proyecto (Figma, CSS, HTML, JavaScript, Jest).
 
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  * [Investigación con jugadores de LoL](src/data/lol/README.md)
+Hicimos columnas de OA’s, project backlog, sprint backlog, doing, done, bloqueos y links (https://trello.com/b/Q65GSUH7/proyecto-2-data-lovers-pok%C3%A9mon).
 
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty. [API Rick and Morty](https://rickandmortyapi.com).
-  * [Investigación con seguidores de Rick and Morty](src/data/rickandmorty/README.md)
 
-* [Juegos Olímpicos de Río de Janeiro](src/data/athletes/athletes.json).
-  Este set nos proporciona la lista de los atletas que ganaron medallas en las
-  olímpiadas de Río de Janeiro.
-  * [Investigación con interesados en juegos olímpicos de Río de Janeiro](src/data/athletes/README.md)
+## 4. Historias de Usuario
 
-* [Studio Ghibli](src/data/ghibli/ghibli.json).
-  En este set encontrarás una lista de las animaciones y sus personajes del
-  [Studio Ghibli](https://ghiblicollection.com/).
-  * [Investigación con seguidores de las animaciones del Studio Ghibli](src/data/ghibli/README.md)
+### Historia de usuario 1
 
-* [Harry Potter](src/data/harrypotter/harry.json).
-  En este set encontrarás una lista de los personajes,libros pociones
-  y hechizos de toda la saga de
-  [Harry Potter](https://harrypotter.fandom.com).
-  * [Investigación con seguidoras de Harry Potter](src/data/harrypotter/README.md)
+**CARD**
+* Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
+* Qué se hizo: "quiero que se muestre el nombre y la imagen de todos los pokémon en la página",
+* Qué sigue: "para poder visualizar a detalle la info de cada pokémon una vez que lo seleccione".
 
-## 3. Objetivos de aprendizaje
+**Criterios de Aceptación:**
+* Mostrar todos los personajes (nombre, imagen, número y tipo en la UI).
+* Scroll desde el primer elemento hasta el último.
+* Que se muestren los personajes a manera de cuadrícula.
 
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
+**Definición de terminado:**
+* Se muestran los personajes en cuadrícula en la página (imagen, nombre, número y tipo).
+* Pasar pruebas unitarias.
+
+####Prototipo baja fidelidad en Papel
+
+	Hicimos un prototipo por Historia de Usuaria.
+
+Para está historia de usuario diseñamos un prototipo en el que únicamente mostramos parte de la data (imagen de pokémon, nombre, número de pokedex, y tipo). Estos datos se muestran a manera de cuadrícula y se les puede dar scroll de arriba-abajo.
+![](<./ImgREADME/HU1papel.png>)
+
+####Prototipo de alta fidelidad (Figma)
+
+En este prototipo se muestra el diseño del header, contenido main (tarjetas individuales por pokemon) y el footer.
+
+Seleccionamos un estilo basado en el juego Pokémon de Nintendo, considerando una fuente de texto usada en el videojuego, así como una paleta de colores similar.  
+
+Empleamos el logotipo oficial de Pokémon Go y su principal o más conocido entrenador pokémon “Ash” para que se identifiqué desde el header de qué trata la página.
+
+En las tarjetas individuales mostramos la imagen del pokemon y sus tipos a manera de íconos, como se realiza en la app original de Pokémon Go.
+
+Como parte del estilo, al pasar el cursor por una de las tarjetas individuales (hover) estas aumentan su saturación y se les da un efecto de sombra al borde.
+
+En el footer se muestra el copyright de la marca Pokémon Go, y lo que serían ligas a sus redes sociales, como tradicionalmente se muestran en este tipo sitios.
+
+![](<./ImgREADME/Historia1.png>)
+
+**Proceso de código**
+
+Para esta HU, investigamos qué son los objetos y los arrays para poder extraer los elementos de interés de la data, así como poder mostrarlos en la sección main del HTML. Para dar estilo a estos elementos también investigamos el modelo de la caja en CSS, particularmente flex-box.
+
+## Historia de usuario 2
+
+**CARD**
+* Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
+* Qué se hizo: "quiero poder filtrar en la página los personajes según categorías",
+* Qué sigue: "para poder visualizar a detalle la info de cada pokémon que entre en la categoría que seleccioné".
+
+**Criterios de Aceptación**
+* Que funcione el botón de filtrado, desplegando categorías que se pueden elegir.
+* Mostrar todos los personajes que contienen elementos que son parte de la categoría a filtrar elegida.
+
+**Criterios de Terminado**
+* Pasar test unitario de la función filtrado.
+* Que en la pantalla se muestren los valores de los objetos que tengan la propiedad (la categoría) seleccionada con el botón de filtrado.
+* Desplegar en GitHub Pages.
+
+####Prototipo baja fidelidad en Papel
+
+Para esta Historia de Usuaria se diseñaron los botones de filtrado (por región y por tipo) de tipo select. Una vez que se le da click a una opción se muestra el filtrado seleccionado.
+
+![](<./ImgREADME/HU2papel.png>)
+
+####Prototipo de alta fidelidad (Figma)
+
+Como parte del prototipo de alta fidelidad, plasmamos nuestra idea de forma más concisa.
+
+En las opciones de cada select se encuentran los filtros por cada región (2 regiones) y por tipo pokémon (18 tipos diferentes).  Al pasar el cursor sobre alguna opción cambia el color del elemento mostrando que sobre ese está el cursor y al hacer click se muestra únicamente los pokemones que están dentro del filtro seleccionado.
+
+Los pokemones se muestran en la misma tarjeta diseñada y codeada desde la HU1.
+
+![](<./ImgREADME/Historia2.png>)
+
+**Proceso de código**
+
+Buscamos qué métodos podíamos emplear para poder filtrar la data de acuerdo a la opción que seleccionaba la usuaria. Encontramos en método filter () y fue el que empleamos en ambas funciones de filtrado.
+
+## Historia de usuario 3
+
+**CARD**
+* Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
+* Qué se hizo: "quiero poder filtrar en la página los personajes al escribir su nombre en el buscador",
+* Qué sigue: "para poder visualizar a detalle la info del pokémon que escribí".
+
+**Criterios de Aceptación**
+* Funcione botón buscar a partir del input text ingresado.
+* Mostrar en pantalla el pokémon ingresado en input y sus detalles.
+
+**Criterios de Terminado**
+* Pasar test unitario de la función filtrado por nombre ingresado.
+* Que en la pantalla se muestren los valores del pokémon ingresado por nombre en el input de texto.
+* Desplegar en GitHub Pages.
+
+####Prototipo baja fidelidad en Papel
+
+Para esta HU3, diseñamos una tarjeta con información más detallada (agregamos una descripción del pokémon, su generación y su región) de cada pokémon, pensando en que esta se mostrará cuando la usuaria busqué en el buscador por nombre a un pokémon en específico.
+
+![](<./ImgREADME/HU3papel.png>)
+
+####Prototipo de alta fidelidad (Figma)
+
+Plasmamos nuestra idea en el prototipo de alta fidelidad, respetando el diseño de la tarjeta a mostrar de nuestro prototipo en papel. Especificamos que el buscador sólo funcionará a partir del input del nombre de un pokémon.
+
+Le dimos un color diferente a la región y generación para hacer resaltar esta nueva información, y de igual manera, le dimos un color de  fondo de acuerdo a nuestra paleta de colores a la pequeña descripción del pokémon.
+
+![](<./ImgREADME/Historia3.png>)
+
+**Proceso de código**
+
+Para esta historia investigamos cómo filtrar con el método filter, teniendo como argumento un input text (el nombre del pokémon) de la usuaria, para mostrar únicamente la tarjeta del pokémon buscado.
+
+##Historia de Usuaria 4
+
+**CARD**
+* Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
+* Qué se hizo: "quiero poder visualizar si el input de mi búsqueda no obtuvo ningún resultado en la página ",
+* Qué sigue: "para poder corregir mi búsqueda o saber que no hay información respecto a lo que busqué".
+
+**Criterios de Aceptación**
+* Funcione botón buscar a partir del input (text) ingresado.
+* Mostrar en pantalla mensaje de error que incluya el input de texto ingresado por la usuaria y un gif de error para darle estilo al mensaje.
+
+**Criterios de Terminado**
+* Que en la pantalla se muestre el mensaje de error : We found no matches for "input ingresado " try typing only the full name of a pokémon.
+* Desplegar en GitHub Pages.
+
+####Prototipo baja fidelidad en Papel
+
+Para esta HU únicamente mostramos cómo se desplegaría el mensaje de error si no hay ningún “match” entre lo que la usuaria ingreso cómo input para búsqueda y los nombres de los pokémon presentes en la data.
+
+Junto al texto pusimos que iría una imagen referente a que existe un error.
+
+![](<./ImgREADME/HU4papel.png>)
+
+####Prototipo de alta fidelidad (Figma)
+
+Dimos estilo al mensaje al ponerlo en una caja con bordes llamativos y un color de letra que sobresale dentro de la paleta de colores que usamos (no logramos plasmar en figma exactamente cómo quedó el estilo del borde en la página web). Asimismo, añadimos al final un gif que da cuenta de que hay un error en la búsqueda que ingresó la usuaria.
+
+Dentro del mensaje se muestra el input que se escribió para que la usuaria noté si tuvo un error de dedo o si no ingresó correctamente un nombre de pokémon.
+
+![](<./ImgREADME/Historia4.png>)
+
+**Proceso de código**
+
+Tuvimos que crear una sección de html a mostrar cuando se detectara el error el input ingresado. A la vez en esta sección tuvimos que encontrar la manera de retornar el mismo input ingresado dentro del mensaje de error.
+
+
+##Historia de Usuaria 5
+
+**CARD**
+* Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
+* Qué se hizo: "quiero poder ORDENAR en la página los personajes según una opción de ordenado",
+* Qué sigue: "para poder visualizar la data organizada de la forma seleccionada ".
+
+**Criterios de Aceptación**
+* Funcione botón ordenado por A-Z, Z-A, y, por orden ascendente y descendente de no. de pokedex.
+* Mostrar en pantalla la data ordenada según la opción seleccionada.
+
+**Criterios de Terminado**
+* Pasar test unitario de la función ordenado A-Z, Z-A, descendente no. pokedex.
+* Que en la pantalla se muestren los pokemones en el orden seleccionado.
+* Desplegar en GitHub Pages
+
+#### Prototipo de baja fidelidad en papel
+
+Para esta HU agregamos el botón de ordenado con un despliegue de opciones de orden de A-Z, Z-A, y # Pokedex. Las tarjetas de los pokemones que se muestran en la sección de main se ordenan según la opción elegida (en el caso dibujado de A-Z).
+
+![](<./ImgREADME/HU5papel.png>)
+
+####Prototipo de alta fidelidad (Figma)
+
+En este prototipo le dimos estilo al select que despliega las opciones de ordenado, y agregamos la opción de ordenar en número pokedex descendente. Mostramos las mismas tarjetas pokemon individuales creadas desde un inicio, únicamente cambia el orden en que se presentan según la opción elegida.
+
+![](<./ImgREADME/Historia5.png>)
+
+**Proceso de código**
+
+Investigamos el método de sort() para poder ordenar según los valores de la data a considerar a partir de la opción seleccionada, creando 4 funciones de orden (una por cada tipo).
+
+
+##Historia de Usuaria 6
+
+**CARD**
+* Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
+* Qué se hizo: "quiero poder visualizar estadística "STAB, DPS y EPS" en una tarjeta por cada pokemon".
+* Qué sigue: "para poder elegir mi estrategia de batalla ".
+
+**Criterios de Aceptación**
+* Añadir a la tarjeta pokémon datos de estadística (Ataque especial de los pokemones)
+* Mostrar en pantalla las estadísticas de STAB, DPS y EPS.
+
+**Criterios de Terminado**
+* Pasar test unitario de las funciones de estadísticas.
+* En la pantalla se muestran los datos de la estadística de ataques especiales dentro de la tarjeta pokémon.
+* El código está en el upstream rama main.
+* Desplegar en GitHub Pages.
+
+####Prototipo baja fidelidad en Papel
+
+Para esta  HU modificamos la tarjeta pokémon a mostrar cuando se ingresa una búsqueda de pokémon por nombre. Agregamos una tabla en la que se muestran los cálculos relevantes para peleas pokémon (STAB, DPS, EPS) por pokémon seleccionado. Igualmente, agregamos información sobre su peso y tamaño.
+
+Empleamos un reacomodo de información en la tarjeta a partir de feedback de usuarias (nuestras compañeras) para que se visualice de forma llamativa y cohesiva la información.
+
+![](<./ImgREADME/HU6papel.png>)
+
+####Prototipo de alta fidelidad (Figma)
+
+El prototipo de alta fidelidad sigue fielmente al prototipo en papel, únicamente se le agregó el número pokémon e íconos de peso y altura, así como estilo general y la paleta de colores a seguir a partir del acomodo decidido.
+
+![](<./ImgREADME/Historia6.png>)
+
+**Proceso de código**
+
+Buscamos cómo convertir datos tipo string a números para poder realizar las operaciones, así como pasar los resultados a números redondeados para que fueran más agradables a la vista.
+
+También hicimos uso de condicionales para que se aplicaran las operaciones correspondientes en los casos debidos (p.e. STAB se incluye únicamente si el tipo de ataque es igual al tipo de pokémon).
+
+Por otra parte, buscamos cómo generar tablas dinámicas para que estas se vincularan y actualizarán a partir de las funciones de cálculo, mostrando en ellas los resultados obtenidos para cada dato de ataque especial.
+
+##Historia de Usuaria 7
+
+**CARD**
+* Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
+* Qué se hizo: "quiero poder regresar al estado inicial de la página cuando concluya mi búsqueda o quiera limpiar filtros aplicados".
+* Qué sigue: "para poder realizar una nueva forma de búsqueda o aplicar nuevos filtros".
+
+**Criterios de Aceptación**
+* Que al dar click al logotipo de pokemon go, regrese a página principal.
+* Que al dar click en botón de clean (limpiar) se limpien todos los filtros y tipos de orden sobre la data.
+
+**Criterios de Terminado**
+* Dar funcionalidad de onclick de regresar a estado default de la página al logotipo (pokemon go) en header.
+* Crear botón de limpiado que igualmente funciona al darle click y así regrese a estado default de la página web.
+* Actualizar estas funcionalidades en rama main.
+* Desplegar en GitHub  Pages.
+
+####Prototipo de alta fidelidad (Figma)
+
+Para esta HU realizamos de forma directa el prototipo de alta fidelidad ya que únicamente agregamos un botón de limpiado (que se diferenciara a partir de sus colores de los botones de filtrado y de orden).
+
+![](<./ImgREADME/Historia7.png>)
+
+**Proceso de código**
+
+Para esta última HU buscamos cómo, al dar click sobre el botón de limpiar o sobre el logotipo en el header, se volviera al estado inicial de la página.
+
+##Pruebas Unitarias
+
+Para este proyecto como parte de los objetivos de aprendizaje, diseñamos e implementamos nuestros propios test con la librería de Jest.
+
+Investigamos sobre data mocks y los creamos; los data mocks son secciones específicas de la data o bien data artificial creada específicamente para testear el funcionamiento de nuestro código.
+
+Igualmente, investigamos sobre lo que son los statements, branches, functions y lines de los cuales se evalúa su cobertura en los test unitarios.
+
+Dependiendo de qué funciones estábamos testeando se desarrollaron los test para la función en cuestión con su data mock específico, logrando abarcar así la cobertura del 100% de branches, statements, functions y lines. Con ello verificamos que nuestro código es realmente funcional para diferentes casos, haciendo pruebas para cada instrucción, condición, y función escrita.
+
+![](<./ImgREADME/PruebasUnitarias.png>)
 
 ### HTML
 
@@ -278,14 +500,7 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
   * [Pruebas con Usuarios 1 — ¿Qué, cuándo y para qué testeamos?](https://eugeniacasabona.medium.com/pruebas-con-usuarios-1-qu%C3%A9-cu%C3%A1ndo-y-para-qu%C3%A9-testeamos-7c3a89b4b5e7)
 </p></details>
 
-## 4. Consideraciones generales
 
-* Este proyecto se debe resolver en duplas.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-* Tiempo para completarlo: Toma como referencia 4 semanas.
-* En este proyecto aprenderás sobre "Historias de Usuario". Trabaja en una historia
-hasta _terminarla_ antes de pasar a la siguiente. Trabaja hasta la historia que puedas/quieras según el tiempo que te vaya tomando.
 
 ## 5. Criterios de aceptación del proyecto
 
