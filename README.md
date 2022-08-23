@@ -14,8 +14,9 @@
   * [4.6 Historia de Usuario 6](#46-historia-de-usuario-6)
   * [4.7 Historia de Usuario 7](#47-historia-de-usuario-7)
 * [5. Pruebas Unitarias](#5-pruebas-unitarias)
-* [6. Objetivos de Aprendizaje](#6-objetivos-de-aprendizaje)
-* [7. Vista final del proyecto](#7-vista-final-del-proyecto)
+* [6. Vista final del proyecto](#6-vista-final-del-proyecto)
+* [7. Objetivos de Aprendizaje](#7-objetivos-de-aprendizaje)
+
 
 ***
 
@@ -310,7 +311,13 @@ Dependiendo de qué funciones estábamos testeando se desarrollaron los test par
 
 ![](<./ImgREADME/PruebasUnitarias.png>)
 
-## 6. Objetivos de Aprendizaje
+## 6. Vista final del proyecto
+
+[Despliegue en GitHub Pages](https://karlacruz11.github.io/CDMX013-data-lovers/)
+
+https://www.loom.com/share/c5c2cc6d9b0548ecb0f0c64078c94f88
+
+## 7. Objetivos de Aprendizaje
 
 ### HTML
 
@@ -360,7 +367,7 @@ Dependiendo de qué funciones estábamos testeando se desarrollaron los test par
 
 - [❌] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
 
-         * Sólo encontramos que son las sentencias, no encontramos información de expresiones en pruebas unitarias.
+* Sólo encontramos que son las sentencias, no encontramos información de expresiones en pruebas unitarias.
 
 
 ### Control de Versiones (Git y GitHub)
@@ -391,10 +398,4 @@ Dependiendo de qué funciones estábamos testeando se desarrollaron los test par
 
 - [❌] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
 
-         * Sólo lo hicimos en una HU, no replicamos durante el resto del proyecto.
-
-## 7. Vista final del proyecto
-
-[Despliegue en GitHub Pages](https://karlacruz11.github.io/CDMX013-data-lovers/)
-
-https://www.loom.com/share/c5c2cc6d9b0548ecb0f0c64078c94f88
+* Sólo lo hicimos en una HU, no replicamos durante el resto del proyecto.
