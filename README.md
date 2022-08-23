@@ -367,35 +367,35 @@ https://www.loom.com/share/c5c2cc6d9b0548ecb0f0c64078c94f88
 
 * [❌] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
 
- * Sólo encontramos que son las sentencias, no encontramos información de expresiones en pruebas unitarias.
+  * Sólo encontramos que son las sentencias, no encontramos información de expresiones en pruebas unitarias.
 
 
 ### Control de Versiones (Git y GitHub)
 
-- [✔️] **Git: Instalación y configuración**
+* [✔️] **Git: Instalación y configuración**
 
-- [✔️] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
+* [✔️] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
 
-- [✔️] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge)**
+* [✔️] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge)**
 
-- [✔️] **GitHub: Creación de cuenta y repos**
+* [✔️] **GitHub: Creación de cuenta y repos**
 
-- [✔️] **GitHub: Despliegue con GitHub Pages**
+* [✔️] **GitHub: Despliegue con GitHub Pages**
 
-- [✔️] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
+* [✔️] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
 
 ### user-centricity
 
-- [✔️] **Diseñar un producto o servicio poniendo a la usuaria en el centro**
+* [✔️] **Diseñar un producto o servicio poniendo a la usuaria en el centro**
 
 ### product-design
 
-- [✔️] **Crear prototipos de alta fidelidad que incluyan interacciones**
+* [✔️] **Crear prototipos de alta fidelidad que incluyan interacciones**
 
-- [✔️] **Seguir los principios básicos de diseño visual**
+* [✔️] **Seguir los principios básicos de diseño visual**
 
 ### research
 
-- [❌] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
+* [❌] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
 
- * Sólo lo hicimos en una HU, no replicamos durante el resto del proyecto.
+  * Sólo lo hicimos en una HU, no replicamos durante el resto del proyecto.
