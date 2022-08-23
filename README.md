@@ -96,7 +96,7 @@ En el footer se muestra el copyright de la marca Pokémon Go, y lo que serían l
 
 **Proceso de código**
 
-Para esta HU, investigamos qué son los objetos y los arrays para poder extraer los elementos de interés de la data, así como poder mostrarlos en la sección main del HTML. Para dar estilo a estos elementos también investigamos el modelo de la caja en CSS, particularmente flex-box.
+Para esta Historias de usuario, investigamos qué son los objetos y los arrays para poder extraer los elementos de interés de la data, así como poder mostrarlos en la sección main del HTML. Para dar estilo a estos elementos también investigamos el modelo de la caja en CSS, particularmente flex-box.
 
 ### 4.2 Historia de Usuario 2
 
@@ -241,7 +241,7 @@ Investigamos el método de sort() para poder ordenar según los valores de la da
 
 **CARD**
 * Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
-* Qué se hizo: "quiero poder visualizar estadística "STAB, DPS y EPS" en una tarjeta por cada pokémon".
+* Qué se hizo: "quiero poder visualizar estadística "STAB, DPS y EPS" en una tarjeta por cada pokémon",
 * Qué sigue: "para poder elegir mi estrategia de batalla ".
 
 **Criterios de Aceptación**
