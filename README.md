@@ -6,13 +6,13 @@
 * [2. Investigación de UX](#2-investigación-de-ux)
 * [3. Trabajo Colaborativo](#3-trabajo-colaborativo)
 * [4. Historias de Usuario](#4-historias-de-usuario)
- * [4.1 Historia de usuario 1](#4.1-historia-de-usuario-1)
- * [4.2 Historia de usuario 2](#4.2-historia-de-usuario-2)
- * [4.3 Historia de usuario 3](#4.3-historia-de-usuario-3)
- * [4.4 Historia de usuario 4](#4.4-historia-de-usuario-4)
- * [4.5 Historia de usuario 5](#4.5-historia-de-usuario-5)
- * [4.6 Historia de usuario 6](#4.6-historia-de-usuario-6)
- * [4.7 Historia de usuario 7](#4.7-historia-de-usuario-7)
+ * [4.1 Historia de usuario 1](#41-historia-de-usuario-1)
+ * [4.2 Historia de usuario 2](#42-historia-de-usuario-2)
+ * [4.3 Historia de usuario 3](#43-historia-de-usuario-3)
+ * [4.4 Historia de usuario 4](#44-historia-de-usuario-4)
+ * [4.5 Historia de usuario 5](#45-historia-de-usuario-5)
+ * [4.6 Historia de usuario 6](#46-historia-de-usuario-6)
+ * [4.7 Historia de usuario 7](#47-historia-de-usuario-7)
 * [5. Pruebas Unitarias](#5-pruebas-unitarias)
 * [6. Objetivos de Aprendizaje](#6-objetivos-de-aprendizaje)
 * [7. Vista Final de proyecto](#7-vista-final-de-proyecto)
@@ -49,7 +49,7 @@ Hicimos columnas de OA’s, project backlog, sprint backlog, doing, done, bloque
 
 ## 4. Historias de Usuario
 
-### 4.1 Historia de usuario 1
+### 4.1. Historia de usuario 1
 
 **CARD**
 * Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
