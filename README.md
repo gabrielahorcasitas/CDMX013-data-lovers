@@ -6,13 +6,13 @@
 * [2. Investigación de UX](#2-investigación-de-ux)
 * [3. Trabajo Colaborativo](#3-trabajo-colaborativo)
 * [4. Historias de Usuario](#4-historias-de-usuario)
-  * [4.1 Historia de usuario 1](#41-historia-de-usuario-1)
-  * [4.2 Historia de usuario 2](#42-historia-de-usuario-2)
-  * [4.3 Historia de usuario 3](#43-historia-de-usuario-3)
-  * [4.4 Historia de usuario 4](#44-historia-de-usuario-4)
-  * [4.5 Historia de usuario 5](#45-historia-de-usuario-5)
-  * [4.6 Historia de usuario 6](#46-historia-de-usuario-6)
-  * [4.7 Historia de usuario 7](#47-historia-de-usuario-7)
+  * [4.1 Historia de Usuario 1](#41-historia-de-usuario-1)
+  * [4.2 Historia de Usuario 2](#42-historia-de-usuario-2)
+  * [4.3 Historia de Usuario 3](#43-historia-de-usuario-3)
+  * [4.4 Historia de Usuario 4](#44-historia-de-usuario-4)
+  * [4.5 Historia de Usuario 5](#45-historia-de-usuario-5)
+  * [4.6 Historia de Usuario 6](#46-historia-de-usuario-6)
+  * [4.7 Historia de Usuario 7](#47-historia-de-usuario-7)
 * [5. Pruebas Unitarias](#5-pruebas-unitarias)
 * [6. Objetivos de Aprendizaje](#6-objetivos-de-aprendizaje)
 * [7. Vista Final de proyecto](#7-vista-final-de-proyecto)
@@ -309,6 +309,11 @@ Igualmente, investigamos sobre lo que son los statements, branches, functions y 
 Dependiendo de qué funciones estábamos testeando se desarrollaron los test para la función en cuestión con su data mock específico, logrando abarcar así la cobertura del 100% de branches, statements, functions y lines. Con ello verificamos que nuestro código es realmente funcional para diferentes casos, haciendo pruebas para cada instrucción, condición, y función escrita.
 
 ![](<./ImgREADME/PruebasUnitarias.png>)
+
+## 7. Vista Final del proyecto
+
+https://www.loom.com/share/c5c2cc6d9b0548ecb0f0c64078c94f88
+
 
 ### HTML
 
