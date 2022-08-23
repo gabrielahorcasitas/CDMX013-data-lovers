@@ -321,51 +321,51 @@ https://www.loom.com/share/c5c2cc6d9b0548ecb0f0c64078c94f88
 
 ### HTML
 
-- [✔️] **Uso de HTML semántico: header, div, main, select | option, input, button, label, footer, tr y th**
+* [✔️] **Uso de HTML semántico: header, div, main, select | option, input, button, label, footer, tr y th**
 
 ### CSS
 
-- [✔️] **Uso de selectores de CSS**
+* [✔️] **Uso de selectores de CSS**
 
-- [✔️] **Modelo de caja (box model): borde, margen, padding**
+* [✔️] **Modelo de caja (box model): borde, margen, padding**
 
-- [✔️] **Uso de flexbox en CSS**
+* [✔️] **Uso de flexbox en CSS**
 
 ### Web APIs
 
-- [✔️] **Uso de selectores del DOM (getElementById)**
+* [✔️] **Uso de selectores del DOM (getElementById)**
 
-- [✔️] **Manejo de eventos del DOM (addEventListener)**
+* [✔️] **Manejo de eventos del DOM (addEventListener)**
 
-- [✔️] **Manipulación dinámica del DOM (replaceChildren,append,classList,createElement,innerHTML)**
+* [✔️] **Manipulación dinámica del DOM (replaceChildren,append,classList,createElement,innerHTML)**
 
 ### JavaScript
 
-- [✔️] **Uso de Vainilla JS**
+* [✔️] **Uso de Vainilla JS**
 
-- [✔️] **Diferenciar entre tipos de datos primitivos y no primitivos**
+* [✔️] **Diferenciar entre tipos de datos primitivos y no primitivos**
 
-- [✔️] **Arrays (uso de métodos como: filter, sort,includes, forEach)**
+* [✔️] **Arrays (uso de métodos como: filter, sort,includes, forEach)**
 
-- [✔️] **Objetos (key, value)**
+* [✔️] **Objetos (key, value)**
 
-- [✔️] **Variables (declaración, asignación, ámbito)**
+* [✔️] **Variables (declaración, asignación, ámbito)**
 
-- [✔️ ] **Uso de condicionales (if-else, operador ternario, lógica booleana)**
+* [✔️ ] **Uso de condicionales (if-else, operador ternario, lógica booleana)**
 
-- [✔️] **Uso de bucles/ciclos (for)**
+* [✔️] **Uso de bucles/ciclos (for)**
 
-- [✔️] **Funciones (params, args, return)**
+* [✔️] **Funciones (params, args, return)**
 
-- [✔️] **Pruebas unitarias (Jest: describe, expect, toBe,toEqual)**
+* [✔️] **Pruebas unitarias (Jest: describe, expect, toBe,toEqual)**
 
-- [✔️] **Módulos de ECMAScript (ES Modules: import y export)**
+* [✔️] **Módulos de ECMAScript (ES Modules: import y export)**
 
-- [✔️] **Uso de linter (ESLINT)**
+* [✔️] **Uso de linter (ESLINT)**
 
-- [✔️] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
+* [✔️] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
 
-- [❌] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
+* [❌] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
 
  * Sólo encontramos que son las sentencias, no encontramos información de expresiones en pruebas unitarias.
 
