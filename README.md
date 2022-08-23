@@ -2,19 +2,19 @@
 
 ## Índice
 
-* [1. Preámbulo del proyecto]
-* [2. Investigación de UX]
-* [3. Trabajo Colaborativo]
-* [4. Historias de Usuario]
- * [Historia de usuario 1]
- * [Historia de usuario 2]
- * [Historia de usuario 3]
- * [Historia de usuario 4]
- * [Historia de usuario 5]
- * [Historia de usuario 6]
- * [Historia de usuario 7]
-* [5. Pruebas Unitarias]
-* [6. Objetivos de Aprendizaje]
+* [1. Preámbulo del proyecto](#1-preámbulo-del-proyecto)
+* [2. Investigación de UX](#2-investigación-de-ux)
+* [3. Trabajo Colaborativo](#3-trabajo-colaborativo)
+* [4. Historias de Usuario](#4-historias-de-usuario)
+ * [Historia de usuario 1](##-historia-de-usuario-1)
+ * [Historia de usuario 2](#-historia-de-usuario-2)
+ * [Historia de usuario 3](#-historia-de-usuario-3)
+ * [Historia de usuario 4](#-historia-de-usuario-4)
+ * [Historia de usuario 5](#-historia-de-usuario-5)
+ * [Historia de usuario 6](#-historia-de-usuario-6)
+ * [Historia de usuario 7](#-historia-de-usuario-7)
+* [5. Pruebas Unitarias](#5-pruebas-unitarias)
+* [6. Objetivos de Aprendizaje](#6-objetivos-de-aprendizaje)
 * [7. Vista Final de proyecto](#7-pistas-tips-y-lecturas-complementarias)
 
 ***
@@ -44,7 +44,7 @@ Para la elaboración de este proyecto, primeramente acordamos horarios de trabaj
 
 Asimismo, categorizamos por etiquetas las tareas a realizar a partir de lo que engloba el proyecto (Figma, CSS, HTML, JavaScript, Jest).
 
-Hicimos columnas de OA’s, project backlog, sprint backlog, doing, done, bloqueos y links (https://trello.com/b/Q65GSUH7/proyecto-2-data-lovers-pok%C3%A9mon).
+Hicimos columnas de OA’s, project backlog, sprint backlog, doing, done, bloqueos y links [Trello](https://trello.com/b/Q65GSUH7/proyecto-2-data-lovers-pok%C3%A9mon).
 
 
 ## 4. Historias de Usuario
@@ -65,14 +65,15 @@ Hicimos columnas de OA’s, project backlog, sprint backlog, doing, done, bloque
 * Se muestran los personajes en cuadrícula en la página (imagen, nombre, número y tipo).
 * Pasar pruebas unitarias.
 
-####Prototipo baja fidelidad en Papel
+#### Prototipo baja fidelidad en Papel
 
-	Hicimos un prototipo por Historia de Usuaria.
+Hicimos un prototipo por Historia de Usuaria.
 
 Para está historia de usuario diseñamos un prototipo en el que únicamente mostramos parte de la data (imagen de pokémon, nombre, número de pokedex, y tipo). Estos datos se muestran a manera de cuadrícula y se les puede dar scroll de arriba-abajo.
-![](<./ImgREADME/HU1papel.png>)
 
-####Prototipo de alta fidelidad (Figma)
+   ![](<./ImgREADME/HU1papel.png>)
+
+#### Prototipo de alta fidelidad (Figma)
 
 En este prototipo se muestra el diseño del header, contenido main (tarjetas individuales por pokemon) y el footer.
 
@@ -108,13 +109,13 @@ Para esta HU, investigamos qué son los objetos y los arrays para poder extraer 
 * Que en la pantalla se muestren los valores de los objetos que tengan la propiedad (la categoría) seleccionada con el botón de filtrado.
 * Desplegar en GitHub Pages.
 
-####Prototipo baja fidelidad en Papel
+#### Prototipo baja fidelidad en Papel
 
 Para esta Historia de Usuaria se diseñaron los botones de filtrado (por región y por tipo) de tipo select. Una vez que se le da click a una opción se muestra el filtrado seleccionado.
 
 ![](<./ImgREADME/HU2papel.png>)
 
-####Prototipo de alta fidelidad (Figma)
+#### Prototipo de alta fidelidad (Figma)
 
 Como parte del prototipo de alta fidelidad, plasmamos nuestra idea de forma más concisa.
 
@@ -144,13 +145,13 @@ Buscamos qué métodos podíamos emplear para poder filtrar la data de acuerdo a
 * Que en la pantalla se muestren los valores del pokémon ingresado por nombre en el input de texto.
 * Desplegar en GitHub Pages.
 
-####Prototipo baja fidelidad en Papel
+#### Prototipo baja fidelidad en Papel
 
 Para esta HU3, diseñamos una tarjeta con información más detallada (agregamos una descripción del pokémon, su generación y su región) de cada pokémon, pensando en que esta se mostrará cuando la usuaria busqué en el buscador por nombre a un pokémon en específico.
 
 ![](<./ImgREADME/HU3papel.png>)
 
-####Prototipo de alta fidelidad (Figma)
+#### Prototipo de alta fidelidad (Figma)
 
 Plasmamos nuestra idea en el prototipo de alta fidelidad, respetando el diseño de la tarjeta a mostrar de nuestro prototipo en papel. Especificamos que el buscador sólo funcionará a partir del input del nombre de un pokémon.
 
@@ -162,7 +163,7 @@ Le dimos un color diferente a la región y generación para hacer resaltar esta 
 
 Para esta historia investigamos cómo filtrar con el método filter, teniendo como argumento un input text (el nombre del pokémon) de la usuaria, para mostrar únicamente la tarjeta del pokémon buscado.
 
-##Historia de Usuaria 4
+## Historia de Usuaria 4
 
 **CARD**
 * Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
@@ -177,7 +178,7 @@ Para esta historia investigamos cómo filtrar con el método filter, teniendo co
 * Que en la pantalla se muestre el mensaje de error : We found no matches for "input ingresado " try typing only the full name of a pokémon.
 * Desplegar en GitHub Pages.
 
-####Prototipo baja fidelidad en Papel
+#### Prototipo baja fidelidad en Papel
 
 Para esta HU únicamente mostramos cómo se desplegaría el mensaje de error si no hay ningún “match” entre lo que la usuaria ingreso cómo input para búsqueda y los nombres de los pokémon presentes en la data.
 
@@ -185,7 +186,7 @@ Junto al texto pusimos que iría una imagen referente a que existe un error.
 
 ![](<./ImgREADME/HU4papel.png>)
 
-####Prototipo de alta fidelidad (Figma)
+#### Prototipo de alta fidelidad (Figma)
 
 Dimos estilo al mensaje al ponerlo en una caja con bordes llamativos y un color de letra que sobresale dentro de la paleta de colores que usamos (no logramos plasmar en figma exactamente cómo quedó el estilo del borde en la página web). Asimismo, añadimos al final un gif que da cuenta de que hay un error en la búsqueda que ingresó la usuaria.
 
@@ -198,7 +199,7 @@ Dentro del mensaje se muestra el input que se escribió para que la usuaria not�
 Tuvimos que crear una sección de html a mostrar cuando se detectara el error el input ingresado. A la vez en esta sección tuvimos que encontrar la manera de retornar el mismo input ingresado dentro del mensaje de error.
 
 
-##Historia de Usuaria 5
+## Historia de Usuaria 5
 
 **CARD**
 * Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
@@ -220,7 +221,7 @@ Para esta HU agregamos el botón de ordenado con un despliegue de opciones de or
 
 ![](<./ImgREADME/HU5papel.png>)
 
-####Prototipo de alta fidelidad (Figma)
+#### Prototipo de alta fidelidad (Figma)
 
 En este prototipo le dimos estilo al select que despliega las opciones de ordenado, y agregamos la opción de ordenar en número pokedex descendente. Mostramos las mismas tarjetas pokemon individuales creadas desde un inicio, únicamente cambia el orden en que se presentan según la opción elegida.
 
@@ -231,7 +232,7 @@ En este prototipo le dimos estilo al select que despliega las opciones de ordena
 Investigamos el método de sort() para poder ordenar según los valores de la data a considerar a partir de la opción seleccionada, creando 4 funciones de orden (una por cada tipo).
 
 
-##Historia de Usuaria 6
+## Historia de Usuaria 6
 
 **CARD**
 * Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
@@ -248,7 +249,7 @@ Investigamos el método de sort() para poder ordenar según los valores de la da
 * El código está en el upstream rama main.
 * Desplegar en GitHub Pages.
 
-####Prototipo baja fidelidad en Papel
+#### Prototipo baja fidelidad en Papel
 
 Para esta  HU modificamos la tarjeta pokémon a mostrar cuando se ingresa una búsqueda de pokémon por nombre. Agregamos una tabla en la que se muestran los cálculos relevantes para peleas pokémon (STAB, DPS, EPS) por pokémon seleccionado. Igualmente, agregamos información sobre su peso y tamaño.
 
@@ -256,7 +257,7 @@ Empleamos un reacomodo de información en la tarjeta a partir de feedback de usu
 
 ![](<./ImgREADME/HU6papel.png>)
 
-####Prototipo de alta fidelidad (Figma)
+#### Prototipo de alta fidelidad (Figma)
 
 El prototipo de alta fidelidad sigue fielmente al prototipo en papel, únicamente se le agregó el número pokémon e íconos de peso y altura, así como estilo general y la paleta de colores a seguir a partir del acomodo decidido.
 
@@ -270,7 +271,7 @@ También hicimos uso de condicionales para que se aplicaran las operaciones corr
 
 Por otra parte, buscamos cómo generar tablas dinámicas para que estas se vincularan y actualizarán a partir de las funciones de cálculo, mostrando en ellas los resultados obtenidos para cada dato de ataque especial.
 
-##Historia de Usuaria 7
+## Historia de Usuaria 7
 
 **CARD**
 * Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
@@ -287,7 +288,7 @@ Por otra parte, buscamos cómo generar tablas dinámicas para que estas se vincu
 * Actualizar estas funcionalidades en rama main.
 * Desplegar en GitHub  Pages.
 
-####Prototipo de alta fidelidad (Figma)
+#### Prototipo de alta fidelidad (Figma)
 
 Para esta HU realizamos de forma directa el prototipo de alta fidelidad ya que únicamente agregamos un botón de limpiado (que se diferenciara a partir de sus colores de los botones de filtrado y de orden).
 
@@ -297,7 +298,7 @@ Para esta HU realizamos de forma directa el prototipo de alta fidelidad ya que �
 
 Para esta última HU buscamos cómo, al dar click sobre el botón de limpiar o sobre el logotipo en el header, se volviera al estado inicial de la página.
 
-##Pruebas Unitarias
+## Pruebas Unitarias
 
 Para este proyecto como parte de los objetivos de aprendizaje, diseñamos e implementamos nuestros propios test con la librería de Jest.
 
