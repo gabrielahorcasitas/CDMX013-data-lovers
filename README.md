@@ -367,7 +367,7 @@ https://www.loom.com/share/c5c2cc6d9b0548ecb0f0c64078c94f88
 
 - [❌] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
 
-* Sólo encontramos que son las sentencias, no encontramos información de expresiones en pruebas unitarias.
+ * Sólo encontramos que son las sentencias, no encontramos información de expresiones en pruebas unitarias.
 
 
 ### Control de Versiones (Git y GitHub)
@@ -398,4 +398,4 @@ https://www.loom.com/share/c5c2cc6d9b0548ecb0f0c64078c94f88
 
 - [❌] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
 
-* Sólo lo hicimos en una HU, no replicamos durante el resto del proyecto.
+ * Sólo lo hicimos en una HU, no replicamos durante el resto del proyecto.
