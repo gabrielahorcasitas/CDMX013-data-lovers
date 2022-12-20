@@ -1,405 +1,324 @@
 # Data Lovers
 
-## Índice
+## Index
 
-* [1. Preámbulo del proyecto](#1-preámbulo-del-proyecto)
-* [2. Investigación de UX](#2-investigación-de-ux)
-* [3. Trabajo Colaborativo](#3-trabajo-colaborativo)
-* [4. Historias de Usuario](#4-historias-de-usuario)
-  * [4.1 Historia de Usuario 1](#41-historia-de-usuario-1)
-  * [4.2 Historia de Usuario 2](#42-historia-de-usuario-2)
-  * [4.3 Historia de Usuario 3](#43-historia-de-usuario-3)
-  * [4.4 Historia de Usuario 4](#44-historia-de-usuario-4)
-  * [4.5 Historia de Usuario 5](#45-historia-de-usuario-5)
-  * [4.6 Historia de Usuario 6](#46-historia-de-usuario-6)
-  * [4.7 Historia de Usuario 7](#47-historia-de-usuario-7)
-* [5. Pruebas Unitarias](#5-pruebas-unitarias)
-* [6. Vista final del proyecto](#6-vista-final-del-proyecto)
-* [7. Objetivos de Aprendizaje](#7-objetivos-de-aprendizaje)
+* [1. Project Summary](#1-project-summary)
+* [2. UX Research](#2-ux-research)
+* [3. Teamwork](#3-teamwork)
+* [4. User Stories](#4-user-stories)
+  * [4.1 User Story 1](#41-user-story-1)
+  * [4.2 User Story 2](#42-user-story-2)
+  * [4.3 User Story 3](#43-user-story-3)
+  * [4.4 User Story 4](#44-user-story-4)
+  * [4.5 User Story 5](#45-user-story-5)
+  * [4.6 User Story 6](#46-user-story-6)
+  * [4.7 User Story 7](#47-user-story-7)
+* [5. Unit Tests](#5-unit-tests)
+* [6. Final Version](#6-final-version)
+* [7. Credits](#7-credits)
 
 
 ***
 
-## 1.  Preámbulo del proyecto
+## 1.  Project Summary
 
-Este proyecto tuvo como objetivo el aprender a manipular un conjunto de datos (set de datos o data) para hacerlos accesibles a través de una página web de utilidad para usuarias específicas.
+The objective of this project was to learn how to manipulate a data set to make it accessible through a useful web page for specific users.
 
-El corazón del proyecto constó de mostrar, filtrar, y ordenar los elementos que constituyen la base de datos, así como hacer cálculos a partir de la misma data.
+The heart of the project consisted of showing, filtering, and ordering the elements that make up the database, as well as making calculations from the same data.
 
-Como dupla elegimos la temática de Pokémon Go, por lo que el set de datos manipulado gira entorno a data sobre aspectos de pelea, tamaño, región, tipo, etc., de 251 pokemones.
+As a duo we chose the theme of Pokémon Go, so the manipulated data set revolves around data on aspects of fighting, size, region, type, etc., of 251 pokemons.
 
-## 2. Investigación de UX
+## 2. UX Research
 
-Las usuarias objetivo de la página web son aquellas interesadas en obtener información acerca de los pokemones encontrados en el juego de Pokémon Go.
+The target users of the website are those interested in obtaining information about the pokemons found in the Pókemon Go videogame.
 
-La data que se muestra en esta página web permite a la usuaria familiarizarse con información de relevancia para su experiencia como entrenadora virtual de Pokémon Go, específicamente sobre los 251 pokemones de las primeras dos generaciones Pokémon.
+The data displayed on this web page allows the user to familiarize themselves with relevant information for their experience as a virtual trainer of Pokémon Go, specifically about the 251 pokemon of the first two Pokémon generations.
 
-Entre los datos de interés que se pueden visualizar se encuentran las estadísticas de ataques especiales de cada Pokémon.
+Among the data of interest that can be displayed are the statistics of special attacks of each Pokémon.
 
-Las estadísticas mostradas son acerca del STAB (Same Type Attack Bonus) que es la unificación de ataque del mismo tipo, sobre el DPS (Damage Per Second) o daño por segundo, y sobre el EPS (Energy Per Second) que es la energía gastada por ataque pokémon en una pelea.
+The statistics shown are about the STAB (Same Type Attack Bonus), the DPS (Damage Per Second) or damage per second, and about the EPS (Energy Per Second) which is the energy spent by a pokemon attack in a fight.
 
-Esta información le ayudará a la usuaria a saber cuál estrategia de pelea implementar en sus partidas de Pokémon Go, de acuerdo al pokémon contrincante y al pokémon campeón elegido para la batalla.
+This information will help the user to know which fighting strategy to implement in their Pokémon Go games, according to the opposing Pokémon and the Pokémon champion  chosen for the battle.
+
+## 3. Teamwork
+
+For the elaboration of this project, we first agreed on collaborative and individual work schedules. For this we use the tool [Trello Pokémon](https://trello.com/b/Q65GSUH7/proyecto-2-data-lovers-pok%C3%A9mon), in which we organize the tasks to be carried out day by day, throughout each sprint, based on User Stories designed to achieve the goals of this project.
+
+Likewise, we categorize the tasks to be carried out by tags based on what the project encompasses (Figma, CSS, HTML, JavaScript, Jest).
+
+On the Trello board we made columns of OA's, project backlog, sprint backlog, doing, done, blocks and links.
 
 
-## 3. Trabajo Colaborativo
+## 4. User Stories
 
-Para la elaboración de este proyecto, primeramente acordamos horarios de trabajo colaborativo e individual. Para ello utilizamos la herramienta [Trello Pokémon](https://trello.com/b/Q65GSUH7/proyecto-2-data-lovers-pok%C3%A9mon), en la cual organizamos las tareas a realizar día con día, a lo largo de cada sprint, según las Historias de Usuario diseñadas para alcanzar los objetivos de este proyecto.
+* [Prototypes in Figma](https://www.figma.com/file/4ObJY2nEcJBYkfOtJ36xZB/Data-Lovers-Pokemon?node-id=0%3A1)
 
-Asimismo, categorizamos por etiquetas las tareas a realizar a partir de lo que engloba el proyecto (Figma, CSS, HTML, JavaScript, Jest).
-
-En el tablero de Trello hicimos columnas de OA’s, project backlog, sprint backlog, doing, done, bloqueos y links.
-
-
-## 4. Historias de Usuario (HU)
-
-* [Visualización de HU en Figma](https://www.figma.com/file/4ObJY2nEcJBYkfOtJ36xZB/Data-Lovers-Pokemon?node-id=0%3A1)
-
-### 4.1 Historia de Usuario 1
+### 4.1 User Story 1
 
 **CARD**
-* Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
-* Qué se hizo: "quiero que se muestre el nombre y la imagen de todos los pokémon en la página",
-* Qué sigue: "para poder visualizar a detalle la info de cada pokémon una vez que lo seleccione".
+* Who is doing what: "Me as a Pókemon virtual trainer",
+* What was done: "want to display the name and image of all pokemon on the page",
+* What's next: "to be able to view in detail the information of each pokémon once I select it".
 
-**Criterios de Aceptación**
-* Mostrar todos los personajes (nombre, imagen, número y tipo en la UI).
-* Scroll desde el primer elemento hasta el último.
-* Que se muestren los personajes a manera de cuadrícula.
+**Criteria of Acceptance**
+* Display all characters (name, image, number and type in the UI).
+* Scroll from the first element to the last.
+* Show the characters as a grid.
 
-**Definición de Terminado**
-* Se muestran los personajes en cuadrícula en la página (imagen, nombre, número y tipo).
-* Pasar pruebas unitarias.
+**Completion Criteria**
+* Characters are displayed in a grid on the page (image, name, number and type).
+* Pass unit tests.
 
-#### Prototipo baja fidelidad en Papel
+#### Low Fidelity Prototype
 
-Hicimos un prototipo por Historia de Usuario.
+We made a prototype for each user story.
 
-Para está historia de usuario diseñamos un prototipo en el que únicamente mostramos parte de la data (imagen de pokémon, nombre, número de pokedex, y tipo). Estos datos se muestran a manera de cuadrícula y se les puede dar scroll de arriba-abajo.
+For this user story we designed a prototype in which we only show part of the data (pokemon image, name, pokedex number, and type). These data are displayed as a grid and can be scrolled up and down.
 
    ![](<./ImgREADME/HU1papel.png>)
 
-#### Prototipo de alta fidelidad (Figma)
+#### High Fidelity Prototype (Figma)
 
-En este prototipo se muestra el diseño del header, contenido main (tarjetas individuales por pokémon) y el footer.
+This prototype shows the layout of the header, main content (individual cards per pokemon) and footer.
 
-Seleccionamos un estilo basado en el juego Pokémon de Nintendo, considerando una fuente de texto usada en el videojuego, así como una paleta de colores similar.  
+We selected a style based on Nintendo's Pokémon game, considering a text font used in the videogame, as well as a similar color palette.
 
-Empleamos el logotipo oficial de Pokémon Go y su principal o más conocido entrenador pokémon “Ash” para que se identifiqué desde el header de qué trata la página.
+We use the official logo of Pokémon Go and its main or best known Pokémon trainer "Ash" so that it can be identified from the header of what the page is about.
 
-En las tarjetas individuales mostramos la imagen del pokemon y sus tipos a manera de íconos, como se realiza en la app original de Pokémon Go.
+On the individual cards we show the image of the pokemon and its types as icons, just as it is done in the original Pokémon Go app.
 
-Como parte del estilo, al pasar el cursor por una de las tarjetas individuales (hover) estas aumentan su saturación y se les da un efecto de sombra al borde.
+As part of the style, hovering over one of the individual cards increases their saturation and gives them a shadow effect on the edge.
 
-En el footer se muestra el copyright de la marca Pokémon Go, y lo que serían ligas a sus redes sociales, como tradicionalmente se muestran en este tipo sitios.
+The footer shows the copyright of the Pokémon Go brand, and what would be links to their social networks, as they are traditionally displayed on these types of sites.
 
 ![](<./ImgREADME/Historia1.png>)
 
-**Proceso de código**
+**Coding Process**
 
-Para esta Historias de usuario, investigamos qué son los objetos y los arrays para poder extraer los elementos de interés de la data, así como poder mostrarlos en la sección main del HTML. Para dar estilo a estos elementos también investigamos el modelo de la caja en CSS, particularmente flex-box.
+For this user story, we investigate what objects and arrays are in order to extract the elements of interest from the data, as well as display them in the main section of the HTML. To style these elements we also investigated the CSS box model, particularly flex-box.
 
-### 4.2 Historia de Usuario 2
+### 4.2 User Story 2
 
 **CARD**
-* Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
-* Qué se hizo: "quiero poder filtrar en la página los personajes según categorías",
-* Qué sigue: "para poder visualizar a detalle la info de cada pokémon que entre en la categoría que seleccioné".
+* Who is doing what: "Me as a pokemon virtual trainer user",
+* What was done: "want to be able to filter the characters according to categories on the page",
+* What's next: "to be able to visualize in detail the information of each pokémon that enters the category that I selected".
 
-**Criterios de Aceptación**
-* Que funcione el botón de filtrado, desplegando categorías que se pueden elegir.
-* Mostrar todos los personajes que contienen elementos que son parte de la categoría a filtrar elegida.
+**Criteria of Acceptance**
+* That the filter button works, displaying categories that can be chosen.
+* Show all the characters that contain elements that are part of the chosen category to filter.
 
-**Criterios de Terminado**
-* Pasar test unitario de la función filtrado.
-* Que en la pantalla se muestren los valores de los objetos que tengan la propiedad (la categoría) seleccionada con el botón de filtrado.
-* Desplegar en GitHub Pages.
+**Completion Criteria**
+* Pass unit test of the filtering function.
+* That the values of the objects that have the property (the category) selected with the filter button be shown on the screen.
+* Deploy to GitHub Pages.
 
-#### Prototipo baja fidelidad en Papel
+#### Low Fidelity Prototype
 
-Para esta Historia de Usuario se diseñaron los botones de filtrado (por región y por tipo) de tipo select. Una vez que se le da click a una opción se muestra el filtrado seleccionado.
+For this user story, the filter buttons (region and type) were designed. Once an option is clicked, the selected filtering is displayed.
 
 ![](<./ImgREADME/HU2papel.png>)
 
-#### Prototipo de alta fidelidad (Figma)
+#### High Fidelity Prototype (Figma)
 
-Como parte del prototipo de alta fidelidad, plasmamos nuestra idea de forma más concisa.
+As part of the hi-fi prototype, we put our idea into a more concise form.
 
-En las opciones de cada select se encuentran los filtros por cada región (2 regiones) y por tipo pokémon (18 tipos diferentes).  Al pasar el cursor sobre alguna opción cambia el color del elemento mostrando que sobre ese está el cursor y al hacer click se muestra únicamente los pokemones que están dentro del filtro seleccionado.
+In the options of each select are the filters for each region (2 regions) and for pokemon type (18 different types). Hovering the cursor over any option changes the color of the element showing that the cursor is on it and clicking shows only the pokemons that are within the selected filter.
 
-Los pokemones se muestran en la misma tarjeta diseñada y codeada desde la Historia de Usuaria 1.
+The pokemons are shown on the same card designed and coded from User Story 1.
 
 ![](<./ImgREADME/Historia2.png>)
 
-**Proceso de código**
+**Coding Process**
 
-Buscamos qué métodos podíamos emplear para poder filtrar la data de acuerdo a la opción que seleccionaba la usuaria. Encontramos el método filter () y fue el que empleamos en ambas funciones de filtrado.
+We looked for what methods we could use to be able to filter the data according to the option that the user selected. We found the filter() method and it was the one we used in both filter functions.
 
-### 4.3 Historia de Usuario 3
+### 4.3 User Story 3
 
 **CARD**
-* Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
-* Qué se hizo: "quiero poder filtrar en la página los personajes al escribir su nombre en el buscador",
-* Qué sigue: "para poder visualizar a detalle la info del pokémon que escribí".
+* Who is doing what: "Me as a pokemon virtual trainer user",
+* What was done: "want to be able to filter the characters on the page by typing their name in the search engine",
+* What's next: "to be able to visualize in detail the info of the pokémon that I wrote".
 
-**Criterios de Aceptación**
-* Funcione botón buscar a partir del input text ingresado.
-* Mostrar en pantalla el pokémon ingresado en input y sus detalles.
+**Criteria of Acceptance**
+* That the search button for the entered input text functions.
+* Show on the screen the pokémon entered in input and its details.
 
-**Criterios de Terminado**
-* Pasar test unitario de la función filtrado por nombre ingresado.
-* Que en la pantalla se muestren los valores del pokémon ingresado por nombre en el input de texto.
-* Desplegar en GitHub Pages.
+**Completion Criteria**
+* Pass unit test of the function filtered by name entered.
+* That the values of the pokémon entered by name in the text input be shown on the screen.
+* Deploy to GitHub Pages.
 
-#### Prototipo baja fidelidad en Papel
+#### Low Fidelity Prototype
 
-Para esta Historia de usuario, diseñamos una tarjeta con información más detallada (agregamos una descripción del pokémon, su generación y su región) de cada pokémon, pensando en que esta se mostrará cuando la usuaria busqué en el buscador por nombre a un pokémon en específico.
+For this user story, we designed a card with more detailed information (we added a description of the pokémon, its generation and its region) of each pokemon, thinking that this would be displayed when the user searched for a specific pokémon by name in the search engine .
 
 ![](<./ImgREADME/HU3papel.png>)
 
-#### Prototipo de alta fidelidad (Figma)
+#### High Fidelity Prototype (Figma)
 
-Plasmamos nuestra idea en el prototipo de alta fidelidad, respetando el diseño de la tarjeta a mostrar de nuestro prototipo en papel. Especificamos que el buscador sólo funcionará a partir del input del nombre de un pokémon.
+We capture our idea in the high-fidelity prototype, respecting the design of the card to be shown from our prototype on paper. We specify that the search engine will only work from the input of the name of a pokemon.
 
-Le dimos un color diferente a la región y generación para hacer resaltar esta nueva información, y de igual manera, le dimos un color de  fondo de acuerdo a nuestra paleta de colores a la pequeña descripción del pokémon.
+We gave the region and generation a different color to make this new information stand out, and likewise, we gave the small description of the pokemon a background color according to our color palette.
 
 ![](<./ImgREADME/Historia3.png>)
 
-**Proceso de código**
+**Coding Process**
 
-Para esta historia investigamos cómo filtrar con el método filter, teniendo como argumento un input text (el nombre del pokémon) de la usuaria, para mostrar únicamente la tarjeta del pokémon buscado.
+For this story we investigate how to use the filter method having as an argument an input text (the name of the pokémon) from the user, to show only the card of the searched pokémon.
 
-### 4.4 Historia de Usuario 4
+### 4.4 User Story 4
 
 **CARD**
-* Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
-* Qué se hizo: "quiero poder visualizar si el input de mi búsqueda no obtuvo ningún resultado en la página ",
-* Qué sigue: "para poder corregir mi búsqueda o saber que no hay información respecto a lo que busqué".
+* Who is doing what: "Me as a pokemon virtual trainer user",
+* What was done: "want to be able to see if my search input did not get any results on the page ",
+* What's next: "so I can correct my search or know that there is no information regarding what I searched for."
 
-**Criterios de Aceptación**
-* Funcione botón buscar a partir del input (text) ingresado.
-* Mostrar en pantalla mensaje de error que incluya el input de texto ingresado por la usuaria y un gif de error para darle estilo al mensaje.
+**Criteria of Acceptance**
+* Functionality of the search button for the text input entered.
+* Show error message on the screen that includes the text input entered by the user and an error gif to style the message.
 
-**Criterios de Terminado**
-* Que en la pantalla se muestre el mensaje de error : We found no matches for "input ingresado " try typing only the full name of a pokémon.
-* Desplegar en GitHub Pages.
+**Completion Criteria**
+* That the error message is shown on the screen: We found no matches for "input entered " try typing only the full name of a pokémon.
+* Deploy to GitHub Pages.
 
-#### Prototipo baja fidelidad en Papel
+#### Low Fidelity Prototype
 
-Para esta Historia de usuario únicamente mostramos cómo se desplegaría el mensaje de error si no hay ningún “match” entre lo que la usuaria ingreso cómo input para búsqueda y los nombres de los pokémon presentes en la data.
+For this user story we only show how the error message would be displayed if there was no "match" between what the user entered as search input and the names of the pokémon present in the data.
 
-Junto al texto pusimos que iría una imagen referente a que existe un error.
+Next to the text we put an image referring to an error.
 
 ![](<./ImgREADME/HU4papel.png>)
 
-#### Prototipo de alta fidelidad (Figma)
+#### High Fidelity Prototype (Figma)
 
-Dimos estilo al mensaje dentro de una caja con bordes llamativos y un color de letra que sobresale de la paleta de colores que usamos (no logramos plasmar en figma exactamente cómo quedó el estilo del borde en la página web). Asimismo, añadimos al final un gif que da cuenta de que hay un error en la búsqueda que ingresó la usuaria.
+We styled the message inside a box with bold borders and a font color that stands out from the color palette we used (we couldn't exactly capture in figma how the border style would look on the webpage). Likewise, we added a gif at the end that shows that there is an error in the search that the user entered.
 
-Dentro del mensaje se muestra el input que se escribió para que la usuaria note si tuvo un error de dedo o si no ingresó correctamente un nombre de pokémon.
+Inside the message, the input that was written is shown so that the user notices if they had a finger error or if they did not enter a pókemon name correctly.
 
 ![](<./ImgREADME/Historia4.png>)
 
-**Proceso de código**
+**Coding Process**
 
-Tuvimos que crear una sección de html a mostrar cuando se detectara el error el input ingresado.En dicha sección encontramos la manera de retornar el mismo input ingresado dentro del mensaje de error.
+We had to create a section to show the entered input when the error is detected. In this section we find the way to return the same input entered within the error message.
 
-
-### 4.5 Historia de Usuario 5
+### 4.5 User Story 5
 
 **CARD**
-* Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
-* Qué se hizo: "quiero poder ORDENAR en la página los personajes según una opción de ordenado",
-* Qué sigue: "para poder visualizar la data organizada de la forma seleccionada ".
+* Who is doing what: "Me as a pokemon virtual trainer user",
+* What was done: "want to be able to sort the characters on the page according to a sort option",
+* What follows: "to be able to visualize the data organized in the selected way".
 
-**Criterios de Aceptación**
-* Funcione botón ordenado por A-Z, Z-A, y, por orden ascendente y descendente de no. de pokedex.
-* Mostrar en pantalla la data ordenada según la opción seleccionada.
+**Criteria of Acceptance**
+*Give functionality to the sort button by A-Z, Z-A, and by ascending and descending order of number of pokedex.
+* Show on the screen the data ordered according to the selected option.
 
-**Criterios de Terminado**
-* Pasar test unitario de la función ordenado A-Z, Z-A, descendente no. pokedex.
-* Que en la pantalla se muestren los pokemones en el orden seleccionado.
-* Desplegar en GitHub Pages.
+**Completion Criteria**
+* Pass unit tests.
+* That the pokemons are shown on the screen in the selected order.
+* Deploy to GitHub Pages.
 
-#### Prototipo de baja fidelidad en papel
+#### Low Fidelity Prototype
 
-Para esta Historia de usuario agregamos el botón de ordenado con un despliegue de opciones de orden de A-Z, Z-A, y # Pokedex. Las tarjetas de los pokemones que se muestran en la sección de main se ordenan según la opción elegida (en el caso dibujado de A-Z).
+For this user story we added the sort button with a display of A-Z, Z-A, and # Pokedex sort options. The pókemon cards shown in the main section are ordered according to the option chosen (in the example drawn from A-Z).
 
 ![](<./ImgREADME/HU5papel.png>)
 
-#### Prototipo de alta fidelidad (Figma)
+#### High Fidelity Prototype (Figma)
 
-En este prototipo le dimos estilo al select que despliega las opciones de ordenado, y agregamos la opción de ordenar en número pokedex descendente. Mostramos las mismas tarjetas pokémon individuales creadas desde un inicio, únicamente cambia el orden en que se presentan según la opción elegida.
+In this prototype we styled the select button that displays the sort options, and added the option to sort by descending pokedex number. We show the same individual pókemon cards created from the beginning, only the order in which they are presented changes according to the option chosen.
 
 ![](<./ImgREADME/Historia5.png>)
 
-**Proceso de código**
+**Coding Process**
 
-Investigamos el método de sort() para poder ordenar según los valores de la data a considerar a partir de la opción seleccionada, creando 4 funciones de orden (una por cada tipo).
+We investigate the sort() method to be able to order according to the data values to be considered from the selected option, creating four order functions (one for each type).
 
-
-### 4.6 Historia de Usuario 6
+### 4.6 User Story 6
 
 **CARD**
-* Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
-* Qué se hizo: "quiero poder visualizar estadística "STAB, DPS y EPS" en una tarjeta por cada pokémon",
-* Qué sigue: "para poder elegir mi estrategia de batalla ".
+* Who is doing what: "Me as a pokemon virtual trainer user",
+* What was done: "want to be able to display "STAB, DPS and EPS" statistics on a card for each pókemon",
+* What's next: "so I can choose my battle strategy".
 
-**Criterios de Aceptación**
-* Añadir a la tarjeta pokémon datos de estadística (Ataque especial de los pokemones).
-* Mostrar en pantalla las estadísticas de STAB, DPS y EPS.
+**Criteria of Acceptance**
+* Add to pokemon card stat data.
+* Display STAB, DPS and EPS stats on screen.
 
-**Criterios de Terminado**
-* Pasar test unitario de las funciones de estadísticas.
-* En la pantalla se muestran los datos de la estadística de ataques especiales dentro de la tarjeta pokémon.
-* El código está en el upstream rama main.
-* Desplegar en GitHub Pages.
+**Completion Criteria**
+* Pass unit test of the statistics functions.
+* The statistics of special attacks is inside the pókemon card be shown on the screen.
+* The code is in the upstream main branch.
+* Deploy to GitHub Pages.
 
-#### Prototipo baja fidelidad en Papel
+#### Low Fidelity Prototype
 
-Para esta Historia de usuario modificamos la tarjeta pokémon a mostrar cuando se ingresa una búsqueda de pokémon por nombre. Agregamos una tabla en la que se muestran los cálculos relevantes para peleas pokémon (STAB, DPS, EPS) por pokémon seleccionado. Igualmente, agregamos información sobre su peso y tamaño.
+For this user story we modified the pokemon card to display when entering a search for pókemon by name. We added a table showing the relevant calculations for pokemon fights (STAB, DPS, EPS) per selected pókemon. Also, we add information about weight and size of the pókemon.
 
-Empleamos un reacomodo de información en la tarjeta a partir de feedback de usuarias (nuestras compañeras) para que se visualice de forma llamativa y cohesiva la información.
+We use a rearrangement of information on the card based on feedback from users (our colleagues) so that the information is displayed in a striking and cohesive way.
 
 ![](<./ImgREADME/HU6papel.png>)
 
-#### Prototipo de alta fidelidad (Figma)
+#### High Fidelity Prototype (Figma)
 
-El prototipo de alta fidelidad sigue fielmente al prototipo en papel, únicamente se le agregó el número pokémon e íconos de peso y altura, así como estilo general y la paleta de colores a seguir a partir del acomodo decidido.
+The high-fidelity prototype faithfully follows the prototype on paper, only the pókemon number, weight and height icons, as well as the general style and the color palette to follow from the decided arrangement were added.
 
 ![](<./ImgREADME/Historia6.png>)
 
-**Proceso de código**
+**Coding Process**
 
-Buscamos cómo convertir datos tipo string a números para poder realizar las operaciones, así como pasar los resultados a números redondeados para que fueran más agradables a la vista.
+We investigate how to convert string type data to numbers to be able to perform the statistical operations, as well as pass the results to rounded numbers to make them more pleasing to the eye.
 
-También hicimos uso de condicionales para que se aplicaran las operaciones correspondientes en los casos debidos (p.e. STAB se incluye únicamente si el tipo de ataque es igual al tipo de pokémon).
+We also made use of conditionals so that the corresponding operations were applied in the appropriate cases (eg STAB is only included if the attack type is equal to the pokemon type).
 
-Por otra parte, buscamos cómo generar tablas dinámicas para que estas se vincularan y actualizaran a partir de las funciones de cálculo, mostrando en ellas los resultados obtenidos para cada dato de ataque especial.
+On the other hand, we looked for how to generate dynamic tables so that they could be linked and updated from the calculation functions, showing in them the results obtained for each special attack data.
 
-### 4.7 Historia de Usuario 7
+### 4.7 User Story 7
 
 **CARD**
-* Quién está haciendo qué: "Yo como usuaria entrenadora virtual de pokémon",
-* Qué se hizo: "quiero poder regresar al estado inicial de la página cuando concluya mi búsqueda o quiera limpiar filtros aplicados",
-* Qué sigue: "para poder realizar una nueva forma de búsqueda o aplicar nuevos filtros".
+* Who is doing what: "Me as a pokemon virtual trainer user",
+* What was done: "want to be able to return to the initial state of the page when I finish my search or want to clear applied filters",
+* What's next: "to be able to perform a new search form or apply new filters".
 
-**Criterios de Aceptación**
-* Que al dar click en el logotipo de pokémon go, regrese a página principal.
-* Que al dar click en botón clean (limpiar) se limpien todos los filtros y tipos de orden sobre la data.
+**Criteria of Acceptance**
+* Return to the main page by clicking on the pókemon go logo at the header.
+* That when clicking on the clean button, all the filters and types of sort on the data are cleaned.
 
-**Criterios de Terminado**
-* Dar funcionalidad de regresar a estado default de la página al dar click al logotipo (pokémon go) en header.
-* Crear botón de limpiado que igualmente funciona al darle click y así regrese a estado default de la página web.
-* Actualizar estas funcionalidades en rama main.
-* Desplegar en GitHub  Pages.
+**Completion Criteria**
+* Provide the functionality for return to the default state of the page by clicking on the logo in the header.
+* Create a clean button that also works when clicked and thus returns to the default state of the web page.
+* Update these features in main branch.
+* Deploy to GitHub Pages.
 
-#### Prototipo de alta fidelidad (Figma)
+#### High Fidelity Prototype (Figma)
 
-Para esta Historia de usuario realizamos de forma directa el prototipo de alta fidelidad, ya que únicamente agregamos un botón de limpiado (que se diferencia a partir de sus colores de los botones de filtrado y de orden).
+For this user story we made the high-fidelity prototype directly, since we only added a clean button (which differs from the filter and order buttons by its colors).
 
 ![](<./ImgREADME/Historia7.png>)
 
-**Proceso de código**
+**Coding Process**
 
-Para esta última Historia de usuario buscamos cómo, al dar click sobre el botón de limpiar o sobre el logotipo en el header, se volviera al estado inicial de la página.
+For this last user story, we looked for how, when clicking on the clean button or on the logo in the header, the page returned to the initial state.
 
-## 5. Pruebas Unitarias
+## 5. Unit Tests
 
-Para este proyecto, como parte de los objetivos de aprendizaje, diseñamos e implementamos nuestros propios test con la librería de Jest.
+For this project, as part of the learning objectives, we designed and implemented our own tests with Jest.
 
-Investigamos sobre data mocks y los creamos; los data mocks son secciones específicas de la data o bien data artificial creada específicamente para testear el funcionamiento de nuestro código.
+We research data mocks and create them; data mocks are specific sections of the data or artificial data created specifically to test the operation of our code.
 
-Igualmente, investigamos sobre lo que son los statements, branches, functions y lines, de los cuales se evalúa su cobertura en los test unitarios.
+Likewise, we investigate what the statements, branches, functions and lines are, of which their coverage is evaluated in the unit tests.
 
-Dependiendo de qué funciones estábamos testeando se desarrollaron los test para la función en cuestión con su data mock específico, logrando abarcar así la cobertura del 100% de branches, statements, functions y lines. Con ello verificamos que nuestro código es realmente funcional para diferentes casos, haciendo pruebas para cada instrucción, condición, y función escrita.
+Depending on which functions we were testing, the tests were developed for the function in question with its specific data mock, thus managing to cover 100% coverage of branches, statements, functions and lines. With this we verify that our code is really functional for different cases, doing tests for each instruction, condition, and written function.
 
 ![](<./ImgREADME/PruebasUnitarias.png>)
 
-## 6. Vista final del proyecto
+## 6. Final Version
 
-[Despliegue en GitHub Pages](https://karlacruz11.github.io/CDMX013-data-lovers/)
+[Deploy at GitHub Pages](https://karlacruz11.github.io/CDMX013-data-lovers/)
 
 https://www.loom.com/share/c5c2cc6d9b0548ecb0f0c64078c94f88
 
-## 7. Objetivos de Aprendizaje
+## 7. Credits
 
-### HTML
+This project was developed by Gabriela Cristina Horcasitas Moreno and Karla Paola Cruz Pérez.
 
-* [✔️] **Uso de HTML semántico: header, div, main, select | option, input, button, label, footer, tr y th**
-
-### CSS
-
-* [✔️] **Uso de selectores de CSS**
-
-* [✔️] **Modelo de caja (box model): borde, margen, padding**
-
-* [✔️] **Uso de flexbox en CSS**
-
-### Web APIs
-
-* [✔️] **Uso de selectores del DOM (getElementById)**
-
-* [✔️] **Manejo de eventos del DOM (addEventListener)**
-
-* [✔️] **Manipulación dinámica del DOM (replaceChildren, append, classList, createElement, innerHTML)**
-
-### JavaScript
-
-* [✔️] **Uso de Vainilla JS**
-
-* [✔️] **Diferenciar entre tipos de datos primitivos y no primitivos**
-
-* [✔️] **Arrays (uso de métodos como: filter, sort,includes, forEach)**
-
-* [✔️] **Objetos (key, value)**
-
-* [✔️] **Variables (declaración, asignación, ámbito)**
-
-* [✔️ ] **Uso de condicionales (if-else, operador ternario, lógica booleana)**
-
-* [✔️] **Uso de bucles/ciclos (for)**
-
-* [✔️] **Funciones (params, args, return)**
-
-* [✔️] **Pruebas unitarias (Jest: describe, expect, toBe,toEqual)**
-
-* [✔️] **Módulos de ECMAScript (ES Modules: import y export)**
-
-* [✔️] **Uso de linter (ESLINT)**
-
-* [✔️] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
-
-* [❌] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
-
-  * Sólo encontramos que son las sentencias, no encontramos información de expresiones en pruebas unitarias.
-
-
-### Control de Versiones (Git y GitHub)
-
-* [✔️] **Git: Instalación y configuración**
-
-* [✔️] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
-
-* [✔️] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge)**
-
-* [✔️] **GitHub: Creación de cuenta y repos**
-
-* [✔️] **GitHub: Despliegue con GitHub Pages**
-
-* [✔️] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
-
-### user-centricity
-
-* [✔️] **Diseñar un producto o servicio poniendo a la usuaria en el centro**
-
-### product-design
-
-* [✔️] **Crear prototipos de alta fidelidad que incluyan interacciones**
-
-* [✔️] **Seguir los principios básicos de diseño visual**
-
-### research
-
-* [❌] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
-
-  * Sólo lo hicimos en una Historia de usuario, no replicamos durante el resto del proyecto.
